@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кирилл Данюков — Сайт-визитка</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Декоративные карандашные элементы фона -->
+  <div class="bg-doodles" aria-hidden="true">
+    <svg class="doodle doodle-1" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10,40 Q30,10 60,35 Q90,60 110,30" stroke="#c8b89a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </svg>
+    <svg class="doodle doodle-2" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="30" cy="30" r="22" stroke="#d4c5b0" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+    </svg>
+    <svg class="doodle doodle-3" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15,65 L40,10 L65,65 Z" stroke="#c8b89a" stroke-width="2" fill="none" stroke-linejoin="round"/>
+    </svg>
+    <svg class="doodle doodle-4" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5,30 C20,5 45,55 70,20 C85,5 95,40 98,30" stroke="#d4c5b0" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <svg class="doodle doodle-5" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25,5 L30,20 L45,20 L33,30 L38,45 L25,36 L12,45 L17,30 L5,20 L20,20 Z" stroke="#c8b89a" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- БЛОК 1: Главный экран -->
+  <section id="hero" class="section hero-section">
+    <div class="hero-content">
+      <div class="hero-photo">
+        <div class="photo-frame sketch-frame">
+          <img src="Фото/Фото 1.webp" alt="Кирилл Данюков" class="zoom-hover hero-photo-click" id="heroPhotoImg">
+        </div>
+        <svg class="pencil-underline" viewBox="0 0 220 20" fill="none">
+          <path d="M5,14 Q55,4 110,12 Q165,18 215,8" stroke="#b8a080" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-name handwritten">Кирилл Данюков</h1>
+        <svg class="name-underline" viewBox="0 0 320 16" fill="none">
+          <path d="M4,10 Q80,2 160,10 Q240,16 316,6" stroke="#c8a060" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <p class="hero-desc">
+          Творческий деятель, КВНщик, блогер, автор медиапроектов и участник общественных инициатив.
+        </p>
+        <p class="hero-since">
+          С 2024 года развиваюсь в сфере медиа, видеопроизводства, блогинга и творческих проектов.
+        </p>
+        <!-- Стрелка вниз -->
+        <div class="scroll-hint">
+          <svg viewBox="0 0 60 80" fill="none">
+            <path d="M30,5 Q32,25 28,45 Q26,55 30,70" stroke="#b8a080" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M18,58 Q30,72 42,58" stroke="#b8a080" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="handwritten-small">листай ниже</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Декоративная стрелка между блоками -->
+  <div class="section-arrow" aria-hidden="true">
+    <svg viewBox="0 0 200 60" fill="none">
+      <path d="M20,10 Q100,0 180,10" stroke="#c8b89a" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+    </svg>
+  </div>
+
+  <!-- БЛОК 2: Опыт и достижения -->
+  <section id="experience" class="section experience-section">
+    <h2 class="section-title handwritten">Опыт и достижения</h2>
+    <svg class="section-title-line" viewBox="0 0 400 16" fill="none">
+      <path d="M10,10 Q100,2 200,10 Q300,16 390,6" stroke="#c8a060" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+
+    <!-- КВН -->
+    <div class="exp-row exp-row-left">
+      <div class="exp-text">
+        <h3 class="exp-title handwritten">КВН</h3>
+        <ul class="exp-list">
+          <li>Основатель команды КВН «STUD SQUAD»</li>
+          <li>Ранее команда выступала под названием «Орлята»</li>
+          <li>Участие в творческих конкурсах и юмористических мероприятиях</li>
+        </ul>
+      </div>
+      <div class="exp-photos" style="position:relative;">
+        <div class="tykni-wrap" aria-hidden="true">
+          <span class="tykni-text">Тыкни!</span>
+          <!-- arc from text (left) curving right toward the photo -->
+          <svg class="tykni-arrow" viewBox="0 0 160 62" fill="none">
+            <path d="M12,10 Q60,4 138,46" stroke="#c8a060" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+            <path d="M126,54 L138,46 L128,38" stroke="#c8a060" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="sketch-photo-wrap sticker-star">
+          <img src="Фото/Фото 2.webp" alt="КВН фото 1" class="sketch-photo zoom-hover">
+          <div class="sticker sticker-star-el">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20,4 L23,14 L34,14 L25,21 L28,32 L20,26 L12,32 L15,21 L6,14 L17,14 Z" fill="#FFD700" stroke="#e6b800" stroke-width="1.5"/></svg>
+          </div>
+        </div>
+        <div class="sketch-photo-wrap sticker-heart">
+          <img src="Фото/Фото 3.webp" alt="КВН фото 2" class="sketch-photo zoom-hover">
+          <div class="sticker sticker-heart-el">
+            <svg viewBox="0 0 40 36" fill="none"><path d="M20,32 C10,22 2,18 2,10 C2,5 6,2 10,2 C14,2 18,6 20,9 C22,6 26,2 30,2 C34,2 38,5 38,10 C38,18 30,22 20,32 Z" fill="#FF4444" stroke="#cc2222" stroke-width="1.5"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Медиа и блогинг -->
+    <div class="exp-row exp-row-right">
+      <div class="exp-photos">
+        <div class="sketch-photo-wrap">
+          <img src="Фото/Фото 4.webp" alt="Медиа фото 1" class="sketch-photo zoom-hover">
+          <div class="sticker sticker-apple-el">
+            <svg viewBox="0 0 40 44" fill="none"><ellipse cx="20" cy="28" rx="15" ry="14" fill="#FF6B6B" stroke="#cc4444" stroke-width="1.5"/><path d="M20,14 Q22,6 28,4" stroke="#5a8a3a" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="27" cy="5" rx="4" ry="5" fill="#6aaa44" stroke="#4a8a2a" stroke-width="1.2"/></svg>
+          </div>
+        </div>
+        <div class="sketch-photo-wrap">
+          <img src="Фото/Фото 5.webp" alt="Медиа фото 2" class="sketch-photo zoom-hover">
+          <div class="sticker sticker-star-el sticker-alt">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20,4 L23,14 L34,14 L25,21 L28,32 L20,26 L12,32 L15,21 L6,14 L17,14 Z" fill="#B0E0FF" stroke="#70b0e0" stroke-width="1.5"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="exp-text">
+        <h3 class="exp-title handwritten">Медиа и блогинг</h3>
+        <ul class="exp-list">
+          <li>Бывший руководитель команды блогеров «Продолжение»</li>
+          <li>Создание видеороликов, монтаж, работа над авторскими проектами</li>
+          <li>Производство короткометражных фильмов</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Стартапы и проекты -->
+    <div class="exp-row exp-row-left">
+      <div class="exp-text">
+        <h3 class="exp-title handwritten">Стартапы и проекты</h3>
+        <ul class="exp-list">
+          <li>Участник развития проекта «Bubble Gum»</li>
+          <li>Участник развития проекта «BigFoot» (пустое сообщество)</li>
+        </ul>
+      </div>
+      <div class="exp-photos">
+        <div class="sketch-photo-wrap">
+          <img src="Фото/Фото 6.webp" alt="Стартап фото 1" class="sketch-photo zoom-hover">
+          <div class="sticker sticker-hands-el">
+            <svg viewBox="0 0 48 40" fill="none">
+              <path d="M12,32 C8,28 4,22 6,16 C8,10 12,8 16,12 L24,20" stroke="#FFB6C1" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M36,32 C40,28 44,22 42,16 C40,10 36,8 32,12 L24,20" stroke="#FFB6C1" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M16,12 L24,4 L32,12" stroke="#FFB6C1" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="sketch-photo-wrap">
+          <img src="Фото/Фото 7.webp" alt="Стартап фото 2" class="sketch-photo zoom-hover">
+          <div class="sticker sticker-heart-el sticker-alt2">
+            <svg viewBox="0 0 44 40" fill="none">
+              <path d="M12,36 C8,30 4,24 8,18" stroke="#FF9999" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M32,36 C36,30 40,24 36,18" stroke="#FF9999" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M8,18 Q14,10 22,14 Q30,10 36,18" stroke="#FF9999" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Волонтёрство -->
+    <div class="exp-row exp-row-right">
+      <div class="exp-photos">
+        <div class="sketch-photo-wrap">
+          <img src="Фото/Фото 8.webp" alt="Волонтёрство фото 1" class="sketch-photo zoom-hover">
+          <div class="sticker sticker-star-el sticker-green">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20,4 L23,14 L34,14 L25,21 L28,32 L20,26 L12,32 L15,21 L6,14 L17,14 Z" fill="#90EE90" stroke="#50aa50" stroke-width="1.5"/></svg>
+          </div>
+        </div>
+        <div class="sketch-photo-wrap">
+          <img src="Фото/Фото 9.webp" alt="Волонтёрство фото 2" class="sketch-photo zoom-hover">
+          <div class="sticker sticker-heart-el">
+            <svg viewBox="0 0 40 36" fill="none"><path d="M20,32 C10,22 2,18 2,10 C2,5 6,2 10,2 C14,2 18,6 20,9 C22,6 26,2 30,2 C34,2 38,5 38,10 C38,18 30,22 20,32 Z" fill="#FF8C94" stroke="#cc5566" stroke-width="1.5"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="exp-text">
+        <h3 class="exp-title handwritten">Волонтёрство</h3>
+        <ul class="exp-list">
+          <li>Участие в волонтёрских развивающих мероприятиях</li>
+          <li>Помощь в организации событий и поддержка благотворительных инициатив</li>
+          <li>Заместитель руководителя комитета по работе с общежитиями Совета студенческого самоуправления ФГБОУ ВО Мичуринский ГАУ</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Награды -->
+    <div class="exp-row exp-row-left">
+      <div class="exp-text">
+        <h3 class="exp-title handwritten">Награды</h3>
+        <ul class="exp-list">
+          <li><strong>Студент года 2025</strong></li>
+          <li>Победитель в номинации «Творческая личность»</li>
+        </ul>
+      </div>
+      <div class="exp-photos exp-photos-single">
+        <div class="sketch-photo-wrap award-photo">
+          <img src="Фото/Фото 10.webp" alt="Награды" class="sketch-photo zoom-hover">
+          <div class="sticker sticker-star-el sticker-gold-big">
+            <svg viewBox="0 0 50 50" fill="none"><path d="M25,5 L29,18 L43,18 L32,26 L36,40 L25,33 L14,40 L18,26 L7,18 L21,18 Z" fill="#FFD700" stroke="#e6b800" stroke-width="2"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Стрелка -->
+  <div class="section-arrow section-arrow-2" aria-hidden="true">
+    <svg viewBox="0 0 200 60" fill="none">
+      <path d="M180,10 Q100,0 20,10" stroke="#c8b89a" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+    </svg>
+  </div>
+
+  <!-- БЛОК 3: Кто я? -->
+  <section id="who" class="section who-section">
+    <h2 class="section-title handwritten">Кто я?</h2>
+    <svg class="section-title-line" viewBox="0 0 300 16" fill="none">
+      <path d="M10,10 Q75,2 150,10 Q225,16 290,6" stroke="#c8a060" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+
+    <div class="who-grid">
+      <div class="who-card zoom-hover">
+        <div class="who-photo-wrap">
+          <img src="Фото/Фото 11.webp" alt="Блогер">
+        </div>
+        <h3 class="handwritten">Блогер</h3>
+        <p>Создаю медиаконтент, работаю с аудиторией, веду блог.</p>
+        <svg class="card-doodle" viewBox="0 0 80 20" fill="none"><path d="M5,14 Q20,4 40,12 Q60,18 75,8" stroke="#c8b89a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      </div>
+
+      <div class="who-card zoom-hover">
+        <div class="who-photo-wrap">
+          <img src="Фото/Фото 12.webp" alt="Артист">
+        </div>
+        <h3 class="handwritten">Артист</h3>
+        <p>Участвую в КВН, театральных постановках, творческих событиях.</p>
+        <svg class="card-doodle" viewBox="0 0 80 20" fill="none"><path d="M5,8 Q20,16 40,8 Q60,2 75,12" stroke="#c8b89a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      </div>
+
+      <div class="who-card zoom-hover">
+        <div class="who-photo-wrap">
+          <img src="Фото/Фото 13.webp" alt="Волонтёр">
+        </div>
+        <h3 class="handwritten">Волонтёр</h3>
+        <p>Являюсь волонтёром, участвую в волонтёрских инициативах, поддерживаю развитие сообщества.</p>
+        <svg class="card-doodle" viewBox="0 0 80 20" fill="none"><path d="M5,14 Q20,4 40,12 Q60,18 75,8" stroke="#c8b89a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      </div>
+
+      <div class="who-card zoom-hover">
+        <div class="who-photo-wrap">
+          <img src="Фото/Фото 14.webp" alt="Ведущий и организатор">
+        </div>
+        <h3 class="handwritten">Ведущий и организатор</h3>
+        <p>Организую мероприятия, веду творческие программы, работаю с командами.</p>
+        <svg class="card-doodle" viewBox="0 0 80 20" fill="none"><path d="M5,8 Q20,16 40,8 Q60,2 75,12" stroke="#c8b89a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Стрелка -->
+  <div class="section-arrow" aria-hidden="true">
+    <svg viewBox="0 0 200 60" fill="none">
+      <path d="M20,10 Q100,0 180,10" stroke="#c8b89a" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+    </svg>
+  </div>
+
+  <!-- БЛОК 4: Мои работы -->
+  <section id="works" class="section works-section">
+    <h2 class="section-title handwritten">Мои работы</h2>
+    <svg class="section-title-line" viewBox="0 0 400 16" fill="none">
+      <path d="M10,10 Q100,2 200,10 Q300,16 390,6" stroke="#c8a060" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+
+    <div class="works-grid">
+      <div class="work-card zoom-hover" data-video="Видео/Видео 1.mp4">
+        <div class="work-thumb">
+          <video class="work-preview" preload="metadata" muted>
+            <source src="Видео/Видео 1.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div class="play-overlay">
+            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.85)" stroke="#b8a080" stroke-width="2"/><polygon points="24,18 44,30 24,42" fill="#b8a080"/></svg>
+          </div>
+        </div>
+        <p class="work-label handwritten-small">Видео 1</p>
+      </div>
+
+      <div class="work-card zoom-hover" data-video="Видео/Видео 2.mp4">
+        <div class="work-thumb">
+          <video class="work-preview" preload="metadata" muted>
+            <source src="Видео/Видео 2.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div class="play-overlay">
+            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.85)" stroke="#b8a080" stroke-width="2"/><polygon points="24,18 44,30 24,42" fill="#b8a080"/></svg>
+          </div>
+        </div>
+        <p class="work-label handwritten-small">Видео 2</p>
+      </div>
+
+      <div class="work-card zoom-hover" data-video="Видео/Видео 3.mp4">
+        <div class="work-thumb">
+          <video class="work-preview" preload="metadata" muted>
+            <source src="Видео/Видео 3.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div class="play-overlay">
+            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.85)" stroke="#b8a080" stroke-width="2"/><polygon points="24,18 44,30 24,42" fill="#b8a080"/></svg>
+          </div>
+        </div>
+        <p class="work-label handwritten-small">Видео 3</p>
+      </div>
+
+      <div class="work-card zoom-hover" data-video="Видео/Видео 4.mp4">
+        <div class="work-thumb">
+          <video class="work-preview" preload="metadata" muted>
+            <source src="Видео/Видео 4.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div class="play-overlay">
+            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.85)" stroke="#b8a080" stroke-width="2"/><polygon points="24,18 44,30 24,42" fill="#b8a080"/></svg>
+          </div>
+        </div>
+        <p class="work-label handwritten-small">Видео 4</p>
+      </div>
+
+      <div class="work-card zoom-hover" data-video="Видео/Видео 5.mp4">
+        <div class="work-thumb">
+          <video class="work-preview" preload="metadata" muted>
+            <source src="Видео/Видео 5.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div class="play-overlay">
+            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.85)" stroke="#b8a080" stroke-width="2"/><polygon points="24,18 44,30 24,42" fill="#b8a080"/></svg>
+          </div>
+        </div>
+        <p class="work-label handwritten-small">Видео 5</p>
+      </div>
+
+      <div class="work-card zoom-hover" data-video="Видео/Видео 6.mp4">
+        <div class="work-thumb">
+          <video class="work-preview" preload="metadata" muted>
+            <source src="Видео/Видео 6.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div class="play-overlay">
+            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.85)" stroke="#b8a080" stroke-width="2"/><polygon points="24,18 44,30 24,42" fill="#b8a080"/></svg>
+          </div>
+        </div>
+        <p class="work-label handwritten-small">Видео 6</p>
+      </div>
+
+      <div class="work-card zoom-hover" data-video="Видео/Видео 7.mp4">
+        <div class="work-thumb">
+          <video class="work-preview" preload="metadata" muted>
+            <source src="Видео/Видео 7.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div class="play-overlay">
+            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.85)" stroke="#b8a080" stroke-width="2"/><polygon points="24,18 44,30 24,42" fill="#b8a080"/></svg>
+          </div>
+        </div>
+        <p class="work-label handwritten-small">Видео 7</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- БЛОК 5: Волонтёрские организации -->
+  <section id="orgs" class="section orgs-section">
+    <div class="orgs-title-wrap">
+      <h2 class="handwritten orgs-title-big">Волонтёрские организации</h2>
+      <p class="orgs-title-small">в которых я состою</p>
+    </div>
+
+    <div class="carousel-outer">
+      <div class="carousel-track" id="carouselTrack">
+        <a href="https://vk.com/neurolab22" target="_blank" rel="noopener" class="carousel-item zoom-hover">
+          <img src="Фото/Фото 15.webp" alt="Нейролаб22">
+        </a>
+        <a href="https://vk.com/club216690736" target="_blank" rel="noopener" class="carousel-item zoom-hover">
+          <img src="Фото/Фото 16.webp" alt="Организация 2">
+        </a>
+        <a href="https://vk.com/studsovet.mgau" target="_blank" rel="noopener" class="carousel-item zoom-hover">
+          <img src="Фото/Фото 17.webp" alt="Студсовет МГАУ">
+        </a>
+        <a href="https://vk.com/patriot.msau" target="_blank" rel="noopener" class="carousel-item zoom-hover">
+          <img src="Фото/Фото 18.webp" alt="Патриот МСХА">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- БЛОК 6: Контакты -->
+  <section id="contacts" class="section contacts-section">
+    <h2 class="section-title handwritten">Контакты</h2>
+    <svg class="section-title-line" viewBox="0 0 300 16" fill="none">
+      <path d="M10,10 Q75,2 150,10 Q225,16 290,6" stroke="#c8a060" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+    <p class="contacts-desc">Связаться со мной можно через ВКонтакте.</p>
+    <a href="https://vk.com/prod_pink0d" target="_blank" rel="noopener" class="vk-link zoom-hover">
+      <img src="Фото/Фото 19.webp" alt="ВКонтакте">
+    </a>
+    <svg class="footer-doodle" viewBox="0 0 400 40" fill="none">
+      <path d="M10,20 Q100,5 200,20 Q300,35 390,20" stroke="#d4c5b0" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <p class="footer-sign handwritten">Кирилл Данюков © 2026</p>
+  </section>
+
+  <!-- Лайтбокс для фото -->
+  <div id="photoModal" class="photo-modal-overlay" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+    <button class="photo-modal-close" id="photoModalClose" aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none"><line x1="4" y1="4" x2="20" y2="20" stroke="#888" stroke-width="2.5" stroke-linecap="round"/><line x1="20" y1="4" x2="4" y2="20" stroke="#888" stroke-width="2.5" stroke-linecap="round"/></svg>
+    </button>
+    <img id="photoModalImg" src="" alt="Фото">
+  </div>
+
+  <!-- Видеоплеер (модальное окно) -->
+  <div id="videoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Видеоплеер">
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none"><line x1="4" y1="4" x2="20" y2="20" stroke="#888" stroke-width="2.5" stroke-linecap="round"/><line x1="20" y1="4" x2="4" y2="20" stroke="#888" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </button>
+
+      <div class="player-wrap">
+        <video id="mainVideo" preload="metadata">
+          <source id="mainVideoSrc" src="" type="video/mp4">
+        </video>
+
+        <div class="player-controls">
+          <!-- Прогресс-бар -->
+          <div class="progress-area">
+            <div class="progress-bar-bg" id="progressBg">
+              <div class="progress-bar-fill" id="progressFill"></div>
+              <div class="progress-bar-thumb" id="progressThumb"></div>
+            </div>
+            <div class="time-display">
+              <span id="currentTime">0:00</span>
+              <span>/</span>
+              <span id="totalTime">0:00</span>
+            </div>
+          </div>
+
+          <!-- Кнопки управления -->
+          <div class="controls-row">
+            <div class="controls-left">
+              <button class="ctrl-btn" id="playPauseBtn" aria-label="Воспроизвести/Пауза">
+                <svg class="icon-play" viewBox="0 0 24 24" fill="none"><polygon points="6,4 20,12 6,20" fill="#444"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24" fill="none" style="display:none"><rect x="5" y="4" width="4" height="16" rx="1" fill="#444"/><rect x="15" y="4" width="4" height="16" rx="1" fill="#444"/></svg>
+              </button>
+              <button class="ctrl-btn" id="rewind10" aria-label="-10 секунд">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 5V2L7 7l5 5V9c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z" fill="#444"/><text x="9" y="15.5" font-size="6" fill="#444" font-family="Arial">10</text></svg>
+              </button>
+              <button class="ctrl-btn" id="forward10" aria-label="+10 секунд">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 5V2l5 5-5 5V9c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z" fill="#444"/><text x="9" y="15.5" font-size="6" fill="#444" font-family="Arial">10</text></svg>
+              </button>
+              <div class="volume-wrap">
+                <button class="ctrl-btn" id="muteBtn" aria-label="Отключить звук">
+                  <svg class="icon-vol" viewBox="0 0 24 24" fill="none"><polygon points="3,9 7,9 12,4 12,20 7,15 3,15" fill="#444"/><path d="M15.54,8.46a5,5,0,0,1,0,7.07" stroke="#444" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M18.36,5.64a9,9,0,0,1,0,12.73" stroke="#444" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+                  <svg class="icon-mute" viewBox="0 0 24 24" fill="none" style="display:none"><polygon points="3,9 7,9 12,4 12,20 7,15 3,15" fill="#444"/><line x1="18" y1="9" x2="24" y2="15" stroke="#444" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="9" x2="18" y2="15" stroke="#444" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </button>
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="1" aria-label="Громкость">
+              </div>
+            </div>
+            <div class="controls-right">
+              <div class="speed-wrap">
+                <button class="ctrl-btn speed-btn" id="speedBtn">1×</button>
+                <div class="speed-menu" id="speedMenu">
+                  <button data-speed="0.5">0.5×</button>
+                  <button data-speed="0.75">0.75×</button>
+                  <button data-speed="1" class="active">1×</button>
+                  <button data-speed="1.5">1.5×</button>
+                  <button data-speed="2">2×</button>
+                </div>
+              </div>
+              <div class="quality-wrap">
+                <button class="ctrl-btn quality-btn" id="qualityBtn" aria-label="Качество видео">HD</button>
+                <div class="quality-menu" id="qualityMenu"></div>
+              </div>
+              <div class="download-wrap">
+                <button class="ctrl-btn" id="downloadBtn" aria-label="Скачать">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v13M7 11l5 5 5-5" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 20h16" stroke="#444" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <button class="ctrl-btn" id="fullscreenBtn" aria-label="Полный экран">
+                <svg class="icon-fs" viewBox="0 0 24 24" fill="none"><path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg class="icon-fs-exit" viewBox="0 0 24 24" fill="none" style="display:none"><path d="M8 3v5H3M21 8h-5V3M16 21v-5h5M3 16h5v5" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
