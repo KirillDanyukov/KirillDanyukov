@@ -311,7 +311,7 @@ body {
 }
 .who-photo-wrap {
   width: 100%;
-  height: 320px;
+  aspect-ratio: 1 / 1; /* Keep 1:1 aspect ratio square on all screens */
   border-radius: 0;
   overflow: hidden;
   margin: 0 0 16px;
@@ -951,7 +951,6 @@ body {
   /* Block 3 */
   .who-section { padding-left: 12px; padding-right: 12px; }
   .who-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 100%; }
-  .who-photo-wrap { height: 240px; }
 
   /* Block 4 */
   .works-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1000,7 +999,6 @@ body {
 
   /* Block 3 */
   .who-grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
-  .who-photo-wrap { height: 260px; }
 
   /* Block 4 */
   .works-grid { grid-template-columns: 1fr; }
