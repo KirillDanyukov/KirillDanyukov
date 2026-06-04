@@ -727,7 +727,7 @@ body {
   transition: background 0.15s, opacity 0.15s, transform 0.15s;
   padding: 4px;
   flex-shrink: 0;
-  opacity: 0.3 !important;
+  opacity: 0.5 !important; /* 50% opacity by default */
 }
 .ctrl-btn:hover {
   background: rgba(255, 255, 255, 0.15) !important;
@@ -753,7 +753,7 @@ body {
   border-radius: 2px;
   outline: none;
   cursor: pointer;
-  opacity: 0.3;
+  opacity: 0.5; /* 50% opacity by default */
   transition: opacity 0.15s;
 }
 .volume-wrap:hover .volume-slider,
@@ -776,7 +776,7 @@ body {
   font-family: var(--font-body);
   font-size: 0.9rem;
   color: #fff !important;
-  opacity: 0.3 !important;
+  opacity: 0.5 !important; /* 50% opacity by default */
   transition: opacity 0.15s;
 }
 .speed-btn:hover {
@@ -859,16 +859,7 @@ body {
   transition: opacity 0.25s ease;
 }
 
-/* Show controls on hover or when .show-ctrl class is present */
-.player-wrap:fullscreen:hover .player-controls,
-.player-wrap:-webkit-full-screen:hover .player-controls,
-.player-wrap.in-fs:hover .player-controls,
-.player-wrap:fullscreen.show-ctrl .player-controls,
-.player-wrap:-webkit-full-screen.show-ctrl .player-controls,
-.player-wrap.in-fs.show-ctrl .player-controls {
-  opacity: 1 !important;
-  pointer-events: all !important;
-}
+
 
 /* --- White UI elements in fullscreen --- */
 .player-wrap:fullscreen .ctrl-btn,
