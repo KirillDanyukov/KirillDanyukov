@@ -622,10 +622,11 @@ body {
 }
 
 .player-controls {
-  background: rgba(255,252,246,0.95);
+  background: rgba(255,252,246,0.60);
   border: 1.5px solid var(--line);
   border-radius: 6px;
   padding: 10px 14px;
+  backdrop-filter: blur(6px);
 }
 
 /* Progress */
@@ -922,6 +923,7 @@ body {
   .who-grid { grid-template-columns: repeat(2, 1fr); }
   .carousel-track { gap: 28px; }
   .carousel-item { width: 240px; height: 240px; }
+  .tykni-wrap { display: none; }
 }
 
 /* ================================================================
@@ -942,7 +944,7 @@ body {
   .exp-row { flex-direction: column !important; gap: 24px; padding: 20px; }
   .exp-photos { flex-direction: row; justify-content: center; flex-wrap: wrap; }
   .sketch-photo { width: 200px; }
-  .tykni-wrap { left: auto; right: -85px; top: 10px; }
+  .tykni-wrap { left: auto; right: -85px; top: 10px; display: none; }
 
   /* Block 3 */
   .who-section { padding-left: 12px; padding-right: 12px; }
@@ -958,6 +960,8 @@ body {
 
   /* Player */
   .controls-row { flex-wrap: wrap; gap: 6px; }
+  .controls-left, .controls-right { flex: 1 1 220px; justify-content: space-between; }
+  .controls-right { flex-wrap: wrap; }
   .volume-slider { width: 55px; }
 }
 
@@ -980,7 +984,7 @@ body {
   .sketch-photo { width: 160px; }
   .exp-title { font-size: 2rem; }
   .exp-list li { font-size: 1rem; }
-  .tykni-wrap { display: none; }   /* hide on very small screens */
+  .tykni-wrap { display: none; }
 
   /* Block 3 */
   .who-grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
@@ -1002,7 +1006,9 @@ body {
   .section-title-line { margin-bottom: 28px; }
 
   /* Player controls */
-  .controls-row { flex-wrap: wrap; gap: 5px; }
+  .controls-row { flex-direction: column; align-items: stretch; gap: 6px; }
+  .controls-left, .controls-right { width: 100%; flex: 1 1 auto; justify-content: space-between; }
+  .controls-right { flex-wrap: wrap; }
   .volume-slider { width: 40px; }
   .ctrl-btn { width: 32px; height: 32px; }
   .speed-btn, .quality-btn { padding: 0 7px; font-size: 0.8rem; }
