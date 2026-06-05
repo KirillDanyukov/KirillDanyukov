@@ -612,7 +612,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 100000;
   transition: transform 0.2s;
 }
 .modal-close:hover { transform: scale(1.1) rotate(90deg); }
@@ -1088,6 +1088,21 @@ body {
   .pencil-underline { margin: 0 auto; width: 200px; } /* Center the underline under larger photo on tablet */
   .scroll-hint { justify-content: center; }
   .hero-name { font-size: clamp(2rem, 7vw, 3.2rem); }
+  .hero-desc {
+    font-family: var(--font-hand);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 14px;
+  }
+  .hero-since {
+    font-family: var(--font-hand);
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   /* Block 2 */
   .exp-row { flex-direction: column !important; gap: 24px; padding: 20px; }
@@ -1134,7 +1149,8 @@ body {
   .sketch-frame { transform: none !important; }
   .sketch-frame img { width: 250px; height: 295px; }
   .hero-name { font-size: 2.4rem; }
-  .hero-desc, .hero-since { font-size: 1rem; }
+  .hero-desc { font-size: 1.35rem; }
+  .hero-since { font-size: 1.15rem; }
 
   /* Block 2 */
   .exp-row { padding: 16px; margin-bottom: 40px; }

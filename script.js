@@ -24,11 +24,9 @@ function openPhotoLightbox(src) {
 
 photoModalClose.addEventListener('click', closePhotoModal);
 photoModal.addEventListener('click', e => {
-  if (e.target === photoModal || e.target === photoModalImg) return;
-  closePhotoModal();
-});
-photoModal.addEventListener('click', e => {
-  if (e.target === photoModal) closePhotoModal();
+  if (e.target !== photoModalImg) {
+    closePhotoModal();
+  }
 });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && photoModal.classList.contains('active')) closePhotoModal();
@@ -120,7 +118,8 @@ function openPlayer(src) {
   const requestFS = playerWrap.requestFullscreen || playerWrap.webkitRequestFullscreen || playerWrap.mozRequestFullScreen || playerWrap.msRequestFullscreen;
   if (requestFS) {
     requestFS.call(playerWrap).catch(error => {
-      console.warn("Auto-fullscreen request failed:", error);
+      console.warn("Auto-fullscreen request failed, falling back to inline fullscreen:", error);
+      enterFsFallback();
     });
   } else {
     enterFsFallback();
@@ -150,6 +149,10 @@ function closePlayer() {
   panX = 0;
   panY = 0;
   mainVideo.style.transform = '';
+
+  if (isInFs) {
+    exitFs();
+  }
 }
 
 modalClose.addEventListener('click', closePlayer);
@@ -402,7 +405,7 @@ document.addEventListener('keydown', e => {
 });
 
 // ─── VIDEO THUMBNAILS ────────────────────────────────────────────────────────
-// Previews/covers are handled natively using `#t=0.1` in the HTML to load preview frames instantly and efficiently.
+// Previews/covers use highly optimized WebP images extracted from videos to load instantly and save bandwidth.
 
 // ─── UTILS ───────────────────────────────────────────────────────────────────
 function fmtTime(secs) {
