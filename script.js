@@ -102,10 +102,6 @@ function openPlayer(src) {
   currentDownloadSrc = playSrc;
 
   // Set the source elements
-  if (mainSrc) {
-    mainSrc.src = playSrc;
-    mainSrc.type = 'video/webm';
-  }
   mainVideo.src = playSrc;
   
   // Reset pinch-to-zoom properties
@@ -140,8 +136,9 @@ function openPlayer(src) {
 
 function closePlayer() {
   mainVideo.pause();
-  mainVideo.src = '';
-  if (mainSrc) mainSrc.src = '';
+  mainVideo.removeAttribute('src');
+  if (mainSrc) mainSrc.removeAttribute('src');
+  mainVideo.load(); // Release decoder memory immediately on close to support weak devices
   modal.classList.remove('active');
   document.body.style.overflow = '';
   speedMenu.classList.remove('open');
@@ -436,6 +433,35 @@ if ('IntersectionObserver' in window) {
     el.style.transition += ', opacity 0.5s ease, transform 0.5s ease';
     el.style.transform  = (el.style.transform || '') + ' translateY(24px)';
     io.observe(el);
+  });
+}
+
+// ─── LAZY LOAD VIDEOS FOR LOW-END DEVICES ────────────────────────────────────
+if ('IntersectionObserver' in window) {
+  const videoObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        const source = video.querySelector('source');
+        if (source && source.dataset.src) {
+          source.src = source.dataset.src;
+          video.load();
+        }
+        observer.unobserve(video);
+      }
+    });
+  }, { rootMargin: '100px' });
+
+  document.querySelectorAll('video.lazy-video').forEach(video => {
+    videoObserver.observe(video);
+  });
+} else {
+  document.querySelectorAll('video.lazy-video').forEach(video => {
+    const source = video.querySelector('source');
+    if (source && source.dataset.src) {
+      source.src = source.dataset.src;
+      video.load();
+    }
   });
 }
 

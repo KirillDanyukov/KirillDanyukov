@@ -51,6 +51,12 @@ body {
   width: 100%;
 }
 
+/* Performance optimization for offscreen sections on low-end devices */
+#experience, #who, #works, #orgs, #contacts {
+  content-visibility: auto;
+  contain-intrinsic-size: 600px;
+}
+
 /* === TYPOGRAPHY === */
 .handwritten { font-family: var(--font-hand); letter-spacing: 0.02em; }
 .handwritten-small { font-family: var(--font-hand); font-size: 0.95em; color: var(--pencil); }
@@ -164,7 +170,7 @@ body {
 
 .exp-text { flex: 1; }
 .exp-title {
-  font-size: 2.6rem;
+  font-size: 2.95rem;
   font-weight: 700;
   margin-bottom: 14px;
   color: var(--ink);
@@ -177,7 +183,7 @@ body {
   padding-left: 24px;
   position: relative;
   margin-bottom: 12px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #3a2a1a;
   line-height: 1.55;
 }
@@ -502,8 +508,12 @@ body {
 }
 
 /* === ZOOM HOVER (generic) === */
-.zoom-hover { transition: transform 0.3s ease; }
+.zoom-hover {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
 .zoom-hover:hover { transform: scale(1.05); }
+
 
 /* === PHOTO LIGHTBOX === */
 .photo-modal-overlay {
@@ -907,6 +917,142 @@ body {
 }
 .player-wrap:fullscreen .speed-menu button:hover,
 .player-wrap.in-fs .speed-menu button:hover { background: rgba(255,255,255,0.15); }
+
+/* ================================================================
+   SKETCHBOOK PHOTO COLLAGES (min-width: 900px)
+   ================================================================ */
+@media (min-width: 900px) {
+  .exp-row {
+    align-items: flex-start; /* Align text and photos to the top */
+  }
+  
+  .exp-text {
+    flex: 1 1 35%; /* Restrict text width slightly to give more space for photos */
+  }
+  
+  .exp-photos {
+    position: relative;
+    width: 650px;
+    height: 550px;
+    flex: 0 0 650px; /* Force collage area to 650px */
+    display: block; /* Override flex layout inside collage container */
+  }
+  
+  /* Make all photos within the collages absolute and set uniform width */
+  .exp-photos .sketch-photo-wrap {
+    position: absolute;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+  }
+  
+  .exp-photos .sketch-photo {
+    width: 300px; /* Slightly larger image size for collages */
+    height: auto;
+  }
+  
+  .exp-photos .award-photo .sketch-photo {
+    width: 320px; /* Keep award photos slightly larger */
+  }
+  
+  /* Increase z-index on wrapper hover so the hovered photo pops to the front */
+  .exp-photos .sketch-photo-wrap:hover {
+    z-index: 50 !important;
+  }
+  
+  /* 1. KVN Collage (Triangle: two top, one bottom-center) */
+  .coll-kvn-1 {
+    left: 10px;
+    top: 10px;
+    transform: rotate(-4deg);
+    z-index: 5;
+  }
+  .coll-kvn-2 {
+    right: 10px;
+    top: 30px;
+    transform: rotate(3deg);
+    z-index: 6;
+  }
+  .coll-kvn-3 {
+    left: 175px;
+    top: 230px;
+    transform: rotate(-2deg);
+    z-index: 7;
+  }
+  
+  /* 2. Media Collage (Staggered diagonal) */
+  .coll-media-1 {
+    left: 20px;
+    top: 10px;
+    transform: rotate(-3deg);
+    z-index: 5;
+  }
+  .coll-media-2 {
+    left: 175px;
+    top: 160px;
+    transform: rotate(4deg);
+    z-index: 6;
+  }
+  .coll-media-3 {
+    right: 20px;
+    top: 290px;
+    transform: rotate(-2deg);
+    z-index: 7;
+  }
+  
+  /* 3. Startups Collage (Triangle pointing upwards) */
+  .coll-startups-1 {
+    left: 175px;
+    top: 10px;
+    transform: rotate(2deg);
+    z-index: 5;
+  }
+  .coll-startups-2 {
+    left: 20px;
+    top: 220px;
+    transform: rotate(-4deg);
+    z-index: 6;
+  }
+  .coll-startups-3 {
+    right: 20px;
+    top: 240px;
+    transform: rotate(3deg);
+    z-index: 7;
+  }
+  
+  /* 4. Volunteering Collage (Staggered zig-zag) */
+  .coll-volunteering-1 {
+    right: 30px;
+    top: 10px;
+    transform: rotate(3deg);
+    z-index: 5;
+  }
+  .coll-volunteering-2 {
+    left: 60px;
+    top: 150px;
+    transform: rotate(-5deg);
+    z-index: 6;
+  }
+  .coll-volunteering-3 {
+    right: 50px;
+    top: 280px;
+    transform: rotate(2deg);
+    z-index: 7;
+  }
+  
+  /* 5. Awards Collage (Two overlapping side-by-side) */
+  .coll-awards-1 {
+    left: 30px;
+    top: 60px;
+    transform: rotate(-3deg);
+    z-index: 5;
+  }
+  .coll-awards-2 {
+    right: 30px;
+    top: 150px;
+    transform: rotate(4deg);
+    z-index: 6;
+  }
+}
+
 
 /* ================================================================
    RESPONSIVE — LARGE DESKTOP  (1380px+)
