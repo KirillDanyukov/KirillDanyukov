@@ -74,6 +74,7 @@ const iconFsExit     = fullscreenBtn.querySelector('.icon-fs-exit');
 
 let currentVideoSrc  = '';
 let isDragging = false;
+let isSubMenuOpen = false;
 
 const VIDEO_LIBRARY = {
   'Видео/Видео 1_1080p.webm': 'Видео/Видео 1_1080p.webm',
@@ -111,7 +112,11 @@ function openPlayer(src) {
   mainVideo.load();
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
-  
+
+  currentSubCues = [];
+  clearSubtitle();
+  if (currentSubLang !== 'off') loadSubtitles(currentSubLang);
+
   showControls(); // Initialize controls visibility and timers
 
   // Request Fullscreen immediately upon opening on both mobile and PC
@@ -141,6 +146,10 @@ function closePlayer() {
   modal.classList.remove('active');
   document.body.style.overflow = '';
   speedMenu.classList.remove('open');
+  subtitleMenu.classList.remove('open');
+  isSubMenuOpen = false;
+  currentSubCues = [];
+  clearSubtitle();
   playerWrap.classList.remove('hide-controls');
   clearTimeout(controlsHideTimer);
   
@@ -190,6 +199,7 @@ forward10.addEventListener('click', () => { mainVideo.currentTime = Math.min(mai
 
 // Progress bar
 mainVideo.addEventListener('timeupdate', updateProgress);
+mainVideo.addEventListener('timeupdate', updateSubtitle);
 mainVideo.addEventListener('loadedmetadata', () => {
   totalTimeEl.textContent = fmtTime(mainVideo.duration);
 });
@@ -305,9 +315,9 @@ function showControls() {
   clearTimeout(controlsHideTimer);
   
   const isSpeedMenuOpen = speedMenu && speedMenu.classList.contains('open');
-  if (!mainVideo.paused && !isSpeedMenuOpen) {
+  if (!mainVideo.paused && !isSpeedMenuOpen && !isSubMenuOpen) {
     controlsHideTimer = setTimeout(() => {
-      if (!mainVideo.paused && (!speedMenu || !speedMenu.classList.contains('open'))) {
+      if (!mainVideo.paused && (!speedMenu || !speedMenu.classList.contains('open')) && !isSubMenuOpen) {
         playerWrap.classList.add('hide-controls');
       }
     }, 3000);
@@ -549,3 +559,100 @@ window.addEventListener('resize', () => {
     updateVideoTransform();
   }
 });
+
+// ─── SUBTITLES ────────────────────────────────────────────────────────────────
+
+const subtitleBtn     = document.getElementById('subtitleBtn');
+const subtitleMenu    = document.getElementById('subtitleMenu');
+const subtitleDisplay = document.getElementById('subtitleDisplay');
+
+let currentSubLang = 'off';
+let currentSubCues = [];
+
+subtitleBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  isSubMenuOpen = !isSubMenuOpen;
+  subtitleMenu.classList.toggle('open', isSubMenuOpen);
+  showControls();
+});
+
+subtitleMenu.querySelectorAll('.sub-option').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    currentSubLang = btn.dataset.lang;
+    subtitleMenu.querySelectorAll('.sub-option').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    subtitleMenu.classList.remove('open');
+    isSubMenuOpen = false;
+    loadSubtitles(currentSubLang);
+    showControls();
+  });
+});
+
+document.addEventListener('click', e => {
+  if (isSubMenuOpen && !subtitleBtn.contains(e.target) && !subtitleMenu.contains(e.target)) {
+    isSubMenuOpen = false;
+    subtitleMenu.classList.remove('open');
+    showControls();
+  }
+});
+
+function loadSubtitles(lang) {
+  currentSubCues = [];
+  clearSubtitle();
+  if (lang === 'off' || !currentVideoSrc) return;
+
+  const m = currentVideoSrc.match(/Видео (\d+)_/);
+  if (!m) return;
+
+  fetch('Субтитры/Видео ' + m[1] + '_' + lang + '.vtt')
+    .then(r => { if (!r.ok) throw new Error('no vtt'); return r.text(); })
+    .then(text => {
+      currentSubCues = parseVTT(text);
+      updateSubtitle(); // show immediately without waiting for next timeupdate
+    })
+    .catch(() => {
+      currentSubCues = [];
+      if (location.protocol === 'file:') {
+        subtitleDisplay.innerHTML = '<span class="subtitle-text" style="font-size:0.85rem;opacity:0.8">⚠ Субтитры требуют запуска через сервер. Открой start.bat</span>';
+        setTimeout(() => { if (!currentSubCues.length) clearSubtitle(); }, 4000);
+      }
+    });
+}
+
+function parseVTT(text) {
+  const cues = [];
+  const blocks = text.replace(/\r\n/g, '\n').split(/\n{2,}/);
+  for (const block of blocks) {
+    const lines = block.trim().split('\n');
+    const ti = lines.findIndex(l => l.includes('-->'));
+    if (ti === -1) continue;
+    const parts = lines[ti].split('-->');
+    const start = parseVTTTime(parts[0].trim());
+    const end   = parseVTTTime(parts[1].trim().split(' ')[0]);
+    const cueText = lines.slice(ti + 1).join('\n').trim();
+    if (cueText) cues.push({ start, end, text: cueText });
+  }
+  return cues;
+}
+
+function parseVTTTime(s) {
+  const p = s.split(':');
+  if (p.length === 3) return +p[0] * 3600 + +p[1] * 60 + parseFloat(p[2]);
+  return +p[0] * 60 + parseFloat(p[1]);
+}
+
+function updateSubtitle() {
+  if (!currentSubCues.length || currentSubLang === 'off') { clearSubtitle(); return; }
+  const t = mainVideo.currentTime;
+  const cue = currentSubCues.find(c => t >= c.start && t < c.end);
+  if (cue) {
+    subtitleDisplay.innerHTML = '<span class="subtitle-text">' + cue.text.replace(/\n/g, '<br>') + '</span>';
+  } else {
+    clearSubtitle();
+  }
+}
+
+function clearSubtitle() {
+  if (subtitleDisplay) subtitleDisplay.innerHTML = '';
+}

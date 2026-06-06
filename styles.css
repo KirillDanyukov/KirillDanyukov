@@ -1182,7 +1182,7 @@ body {
   .controls-row { flex-wrap: wrap; gap: 5px; }
   .volume-slider { width: 40px; }
   .ctrl-btn { width: 32px; height: 32px; }
-  .speed-btn, .quality-btn { padding: 0 7px; font-size: 0.8rem; }
+  .speed-btn { padding: 0 7px; font-size: 0.8rem; }
   .modal-container { padding: 10px; }
   .modal-close { top: 6px; right: 6px; width: 30px; height: 30px; }
 }
@@ -1252,13 +1252,96 @@ body {
 }
 
 /* ================================================================
+   SUBTITLES
+   ================================================================ */
+.subtitle-display {
+  position: absolute;
+  bottom: 82px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+  pointer-events: none;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.subtitle-text {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 7px 16px;
+  border-radius: 4px;
+  max-width: 80%;
+}
+
+.subtitle-wrap { position: relative; }
+
+.subtitle-menu {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  right: 0;
+  background: rgba(30, 25, 20, 0.95);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.25);
+  display: none;
+  flex-direction: column;
+  min-width: 148px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.subtitle-menu.open { display: flex; }
+
+.sub-option {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  cursor: pointer;
+  color: #eee;
+  transition: background 0.1s;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.sub-option:hover { background: rgba(255, 255, 255, 0.12); }
+.sub-option.active { color: #fff; font-weight: 600; background: rgba(255, 255, 255, 0.1); }
+
+/* Subtitle styles in fullscreen */
+.player-wrap:fullscreen .subtitle-display,
+.player-wrap:-webkit-full-screen .subtitle-display,
+.player-wrap.in-fs .subtitle-display {
+  bottom: 100px;
+}
+
+.player-wrap:fullscreen .subtitle-text,
+.player-wrap:-webkit-full-screen .subtitle-text,
+.player-wrap.in-fs .subtitle-text {
+  font-size: 1.35rem;
+  padding: 9px 20px;
+}
+
+.player-wrap:fullscreen .subtitle-menu,
+.player-wrap:-webkit-full-screen .subtitle-menu,
+.player-wrap.in-fs .subtitle-menu {
+  background: rgba(20, 18, 15, 0.97);
+}
+
+/* ================================================================
    LANGUAGE SWITCHER
    ================================================================ */
 .lang-switcher {
-  position: fixed;
+  position: absolute;
   right: 22px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 22px;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -1339,14 +1422,9 @@ body {
 @media (max-width: 600px) {
   .lang-switcher {
     right: 12px;
-    top: auto;
-    bottom: 18px;
+    top: 16px;
+    bottom: auto;
     transform: none;
-  }
-  .lang-dropdown {
-    bottom: calc(100% + 8px);
-    top: auto;
-    right: 0;
   }
   .lang-btn {
     width: 44px;

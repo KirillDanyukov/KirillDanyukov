@@ -3,6 +3,7 @@
 const TRANSLATIONS = {
   ru: {
     'page-title':      'Кирилл Данюков — Сайт-визитка',
+    'hero-name':       'Кирилл Данюков',
     'hero-desc':       'Творческий деятель, КВНщик, блогер, автор медиапроектов и участник общественных инициатив.',
     'hero-since':      'С 2024 года развиваюсь в сфере медиа, видеопроизводства, блогинга и творческих проектов.',
     'scroll-hint':     'листай ниже',
@@ -42,11 +43,12 @@ const TRANSLATIONS = {
     'orgs-subtitle':   'в которых я состою',
     'contacts-title':  'Контакты',
     'contacts-desc':   'Связаться со мной можно через ВКонтакте.',
-    'footer-sign':     'Кирилл Данюков © 2026',
+    'footer-sign':     'Kirill Danyukov © 2026',
   },
 
   en: {
     'page-title':      'Kirill Danyukov — Portfolio',
+    'hero-name':       'Kirill Danyukov',
     'hero-desc':       'Creative personality, KVN performer, blogger, author of media projects and participant in public initiatives.',
     'hero-since':      'Since 2024 I have been developing in the fields of media, video production, blogging and creative projects.',
     'scroll-hint':     'scroll down',
@@ -91,6 +93,7 @@ const TRANSLATIONS = {
 
   be: {
     'page-title':      'Кірыл Данюкоў — Сайт-візітка',
+    'hero-name':       'Кирилл Данюков',
     'hero-desc':       'Творчы дзеяч, кавэншчык, блогер, аўтар медыяпраектаў і ўдзельнік грамадскіх ініцыятыў.',
     'hero-since':      'З 2024 года развіваюся ў сферы медыя, відэавытворчасці, блогінгу і творчых праектаў.',
     'scroll-hint':     'гартайце ніжэй',
@@ -130,11 +133,12 @@ const TRANSLATIONS = {
     'orgs-subtitle':   'у якіх я складаюся',
     'contacts-title':  'Кантакты',
     'contacts-desc':   'Звязацца са мной можна праз УКантакце.',
-    'footer-sign':     'Кірыл Данюкоў © 2026',
+    'footer-sign':     'Kirill Danyukov © 2026',
   },
 
   uk: {
     'page-title':      'Кирило Данюков — Сайт-візитка',
+    'hero-name':       'Кирилл Данюков',
     'hero-desc':       'Творча особистість, кавеенщик, блогер, автор медіапроєктів та учасник громадських ініціатив.',
     'hero-since':      'З 2024 року розвиваюся у сфері медіа, відеовиробництва, блогінгу та творчих проєктів.',
     'scroll-hint':     'гортайте нижче',
@@ -174,11 +178,12 @@ const TRANSLATIONS = {
     'orgs-subtitle':   'в яких я перебуваю',
     'contacts-title':  'Контакти',
     'contacts-desc':   'Зв\'язатися зі мною можна через ВКонтакте.',
-    'footer-sign':     'Кирило Данюков © 2026',
+    'footer-sign':     'Kirill Danyukov © 2026',
   },
 
   kk: {
     'page-title':      'Кирилл Данюков — Портфолио',
+    'hero-name':       'Кирилл Данюков',
     'hero-desc':       'Шығармашылық тұлға, КВН ойыншысы, блогер, медиа жобалардың авторы және қоғамдық бастамалардың қатысушысы.',
     'hero-since':      '2024 жылдан бастап медиа, бейнеөндіріс, блогинг және шығармашылық жобалар саласында дамып келемін.',
     'scroll-hint':     'төмен айналдырыңыз',
@@ -218,11 +223,12 @@ const TRANSLATIONS = {
     'orgs-subtitle':   'мен мүше болып табылатын',
     'contacts-title':  'Байланыс',
     'contacts-desc':   'Мен ВКонтакте арқылы хабарласуға болады.',
-    'footer-sign':     'Кирилл Данюков © 2026',
+    'footer-sign':     'Kirill Danyukov © 2026',
   },
 
   de: {
     'page-title':      'Kirill Danjukow — Portfolio',
+    'hero-name':       'Kirill Danyukov',
     'hero-desc':       'Kreative Persönlichkeit, KVN-Teilnehmer, Blogger, Autor von Medienprojekten und Teilnehmer an öffentlichen Initiativen.',
     'hero-since':      'Seit 2024 entwickle ich mich in den Bereichen Medien, Videoproduktion, Bloggen und kreative Projekte.',
     'scroll-hint':     'nach unten scrollen',
@@ -262,11 +268,12 @@ const TRANSLATIONS = {
     'orgs-subtitle':   'deren Mitglied ich bin',
     'contacts-title':  'Kontakt',
     'contacts-desc':   'Sie können mich über VKontakte kontaktieren.',
-    'footer-sign':     'Kirill Danjukow © 2026',
+    'footer-sign':     'Kirill Danyukov © 2026',
   },
 
   fr: {
     'page-title':      'Kirill Danioukov — Portfolio',
+    'hero-name':       'Kirill Danyukov',
     'hero-desc':       'Personnalité créative, participant au KVN, blogueur, auteur de projets médiatiques et participant aux initiatives publiques.',
     'hero-since':      'Depuis 2024, je me développe dans les domaines des médias, de la production vidéo, du blogging et des projets créatifs.',
     'scroll-hint':     'défiler vers le bas',
@@ -306,11 +313,12 @@ const TRANSLATIONS = {
     'orgs-subtitle':   'dont je suis membre',
     'contacts-title':  'Contacts',
     'contacts-desc':   'Vous pouvez me contacter via VKontakte.',
-    'footer-sign':     'Kirill Danioukov © 2026',
+    'footer-sign':     'Kirill Danyukov © 2026',
   },
 
   zh: {
     'page-title':      '基里尔·达尼乌科夫 — 个人网站',
+    'hero-name':       'Kirill Danyukov',
     'hero-desc':       '创意人士、KVN表演者、博主、媒体项目作者及公共倡议参与者。',
     'hero-since':      '自2024年起，我在媒体、视频制作、博客和创意项目领域不断发展。',
     'scroll-hint':     '向下滑动',
@@ -350,11 +358,12 @@ const TRANSLATIONS = {
     'orgs-subtitle':   '我所参与的',
     'contacts-title':  '联系方式',
     'contacts-desc':   '您可以通过VKontakte联系我。',
-    'footer-sign':     '基里尔·达尼乌科夫 © 2026',
+    'footer-sign':     'Kirill Danyukov © 2026',
   },
 
   ko: {
     'page-title':      '키릴 다뉴코프 — 포트폴리오',
+    'hero-name':       'Kirill Danyukov',
     'hero-desc':       '창의적 인물, KVN 참가자, 블로거, 미디어 프로젝트 작가 및 공공 이니셔티브 참여자.',
     'hero-since':      '2024년부터 미디어, 영상 제작, 블로깅 및 창의적 프로젝트 분야에서 발전하고 있습니다.',
     'scroll-hint':     '아래로 스크롤',
@@ -394,11 +403,12 @@ const TRANSLATIONS = {
     'orgs-subtitle':   '내가 소속된',
     'contacts-title':  '연락처',
     'contacts-desc':   'VKontakte를 통해 저에게 연락할 수 있습니다.',
-    'footer-sign':     '키릴 다뉴코프 © 2026',
+    'footer-sign':     'Kirill Danyukov © 2026',
   },
 
   ja: {
     'page-title':      'キリル・ダニュコフ — ポートフォリオ',
+    'hero-name':       'Kirill Danyukov',
     'hero-desc':       'クリエイティブな活動家、KVNパフォーマー、ブロガー、メディアプロジェクトの著者、公共イニシアチブ参加者。',
     'hero-since':      '2024年からメディア、動画制作、ブログ、クリエイティブプロジェクトの分野で活動中。',
     'scroll-hint':     '下にスクロール',
@@ -438,13 +448,22 @@ const TRANSLATIONS = {
     'orgs-subtitle':   '所属している',
     'contacts-title':  '連絡先',
     'contacts-desc':   'VKontakteでご連絡いただけます。',
-    'footer-sign':     'キリル・ダニュコフ © 2026',
+    'footer-sign':     'Kirill Danyukov © 2026',
   },
 };
 
 // ─── LANGUAGE SWITCHER LOGIC ─────────────────────────────────────────────────
 
-let currentLang = localStorage.getItem('lang') || 'ru';
+// Country code (ISO 3166-1 alpha-2) → site language code
+const COUNTRY_LANG_MAP = {
+  'RU': 'ru', 'BY': 'be', 'UA': 'uk', 'KZ': 'kk',
+  'DE': 'de', 'AT': 'de', 'LI': 'de',
+  'FR': 'fr', 'MC': 'fr',
+  'CN': 'zh', 'HK': 'zh', 'MO': 'zh', 'TW': 'zh',
+  'KR': 'ko', 'JP': 'ja',
+};
+
+let currentLang = 'en';
 
 function applyLang(lang) {
   const dict = TRANSLATIONS[lang];
@@ -485,5 +504,35 @@ langDropdown.addEventListener('click', e => {
   langDropdown.classList.remove('open');
 });
 
-// Apply saved/default language on load
-applyLang(currentLang);
+// ─── GEO-BASED AUTO-DETECTION (first visit only) ─────────────────────────────
+
+function initLang() {
+  const saved = localStorage.getItem('lang');
+  if (saved && TRANSLATIONS[saved]) {
+    applyLang(saved);
+    return;
+  }
+
+  // No saved preference: show English immediately, then try geolocation
+  applyLang('en');
+
+  if (!navigator.geolocation) return;
+
+  navigator.geolocation.getCurrentPosition(
+    function(pos) {
+      var lat = pos.coords.latitude;
+      var lon = pos.coords.longitude;
+      fetch('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=' + lat + '&longitude=' + lon + '&localityLanguage=en')
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          var lang = COUNTRY_LANG_MAP[d.countryCode] || 'en';
+          applyLang(lang);
+        })
+        .catch(function() { /* keep English, already applied */ });
+    },
+    function() { /* permission denied or error — keep English */ },
+    { timeout: 4000, maximumAge: 86400000 }
+  );
+}
+
+initLang();

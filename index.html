@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="page-title">Кирилл Данюков — Сайт-визитка</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Indie+Flower&family=Inter:wght@400;500&family=Patrick+Hand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -42,7 +44,7 @@
         </svg>
       </div>
       <div class="hero-text">
-        <h1 class="hero-name handwritten">Кирилл Данюков</h1>
+        <h1 class="hero-name handwritten" data-i18n="hero-name">Кирилл Данюков</h1>
         <svg class="name-underline" viewBox="0 0 320 16" fill="none">
           <path d="M4,10 Q80,2 160,10 Q240,16 316,6" stroke="#c8a060" stroke-width="3" fill="none" stroke-linecap="round"/>
         </svg>
@@ -124,7 +126,7 @@
           </div>
         </div>
         <div class="sketch-photo-wrap coll-kvn-3">
-          <img src="Фото/Фото 20.png" alt="КВН фото 3" class="sketch-photo zoom-hover" loading="lazy">
+          <img src="Фото/Фото 20.webp" alt="КВН фото 3" class="sketch-photo zoom-hover" loading="lazy">
           <div class="sticker sticker-green">
             <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Fluffy clown wig (left and right) -->
@@ -187,7 +189,7 @@
           </div>
         </div>
         <div class="sketch-photo-wrap coll-media-3">
-          <img src="Фото/Фото 21.png" alt="Медиа фото 3" class="sketch-photo zoom-hover" loading="lazy">
+          <img src="Фото/Фото 21.webp" alt="Медиа фото 3" class="sketch-photo zoom-hover" loading="lazy">
           <div class="sticker sticker-green">
             <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="20" cy="20" r="15" fill="#FF4444" stroke="#cc2222" stroke-width="2"/>
@@ -238,7 +240,7 @@
           </div>
         </div>
         <div class="sketch-photo-wrap coll-startups-3">
-          <img src="Фото/Фото 22.png" alt="Стартап фото 3" class="sketch-photo zoom-hover" loading="lazy">
+          <img src="Фото/Фото 22.webp" alt="Стартап фото 3" class="sketch-photo zoom-hover" loading="lazy">
           <div class="sticker sticker-green">
             <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20,6 C14,6 10,10 10,16 C10,20 13,23 15,25 L15,29 L25,29 L25,25 C27,23 30,20 30,16 C30,10 26,6 20,6 Z" fill="#FFEAA7" stroke="#F5B041" stroke-width="2"/>
@@ -276,7 +278,7 @@
           </div>
         </div>
         <div class="sketch-photo-wrap coll-volunteering-3">
-          <img src="Фото/Фото 23.jpg" alt="Волонтёрство фото 3" class="sketch-photo zoom-hover" loading="lazy">
+          <img src="Фото/Фото 23.webp" alt="Волонтёрство фото 3" class="sketch-photo zoom-hover" loading="lazy">
           <div class="sticker sticker-green">
             <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Symmetrical filled thick recycling symbol -->
@@ -320,7 +322,7 @@
           </div>
         </div>
         <div class="sketch-photo-wrap award-photo coll-awards-2">
-          <img src="Фото/Фото 24.png" alt="Награды 2" class="sketch-photo zoom-hover" loading="lazy">
+          <img src="Фото/Фото 24.webp" alt="Награды 2" class="sketch-photo zoom-hover" loading="lazy">
           <div class="sticker sticker-star-el">
             <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20,4 L24,13 L34,13 L26,20 L29,30 L20,24 L11,30 L14,20 L6,13 L16,13 Z" fill="#FFD700" stroke="#e6b800" stroke-width="2" stroke-linejoin="round"/>
@@ -538,9 +540,11 @@
       </button>
 
       <div class="player-wrap">
-        <video id="mainVideo" preload="auto">
+        <video id="mainVideo" preload="none">
           <source id="mainVideoSrc" src="" type="video/webm">
         </video>
+
+        <div class="subtitle-display" id="subtitleDisplay"></div>
 
         <div class="player-controls">
           <!-- Прогресс-бар -->
@@ -586,6 +590,25 @@
                   <button data-speed="1" class="active">1×</button>
                   <button data-speed="1.5">1.5×</button>
                   <button data-speed="2">2×</button>
+                </div>
+              </div>
+
+              <div class="subtitle-wrap">
+                <button class="ctrl-btn" id="subtitleBtn" aria-label="Выбор субтитров">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="#444" stroke-width="2"/><path d="M6 11h5M6 14h3M13 11h5M13 14h4" stroke="#444" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </button>
+                <div class="subtitle-menu" id="subtitleMenu">
+                  <button class="sub-option active" data-lang="off">Отключено</button>
+                  <button class="sub-option" data-lang="ru">🇷🇺 Русский</button>
+                  <button class="sub-option" data-lang="en">🇬🇧 English</button>
+                  <button class="sub-option" data-lang="be">🇧🇾 Беларуская</button>
+                  <button class="sub-option" data-lang="uk">🇺🇦 Українська</button>
+                  <button class="sub-option" data-lang="kk">🇰🇿 Қазақша</button>
+                  <button class="sub-option" data-lang="de">🇩🇪 Deutsch</button>
+                  <button class="sub-option" data-lang="fr">🇫🇷 Français</button>
+                  <button class="sub-option" data-lang="zh">🇨🇳 中文</button>
+                  <button class="sub-option" data-lang="ko">🇰🇷 한국어</button>
+                  <button class="sub-option" data-lang="ja">🇯🇵 日本語</button>
                 </div>
               </div>
 

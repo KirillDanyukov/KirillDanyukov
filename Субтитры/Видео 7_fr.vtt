@@ -1,0 +1,418 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.000
+Bonjour à tous, vous entendez le livre photo, claquez-moi, le présentateur et réalisateur de Kiriodannikov.
+
+2
+00:00:06.000 --> 00:00:13.000
+Nos invités sont également le fondateur de bukfotok, proskorin Kirio et le développeur de bkentr, Nechai FIVAN.
+
+3
+00:00:13.000 --> 00:00:21.000
+Bonjour à tous les gars, c'est super que vous nous rejoigniez. Aujourd'hui, nous allons vous dire beaucoup de choses intéressantes sur Kipevsha.
+
+4
+00:00:24.000 --> 00:00:29.000
+Bonjour à tous, je serai ravi de vous parler de notre candidature concernant le pays technique.
+
+5
+00:00:31.000 --> 00:00:35.000
+Avec cela, nous allons commencer. Je tiens à vous exprimer ma profonde gratitude pour vos dons.
+
+6
+00:00:35.000 --> 00:00:39.000
+Grâce à vos dons, nous recevons un salaire.
+
+7
+00:00:39.000 --> 00:00:44.000
+Ils devraient, mais c'est un jeune homme, j'aimerais bien boire un verre, à mon avis.
+
+8
+00:00:44.000 --> 00:00:48.000
+Non, écoute, c'est très important. Nous nous sommes assis sans les Newbs.
+
+9
+00:00:48.000 --> 00:00:52.000
+Et vos dons, votre soutien et vos aimables paroles nous sont toujours utiles.
+
+10
+00:00:52.000 --> 00:00:59.000
+Si vous pariez sur tout, vous venez beaucoup plus souvent, alors notre équipe ne fera que progresser.
+
+11
+00:01:00.000 --> 00:01:07.000
+Oui, c'est vrai. Le soutien de la communauté n’a pas de prix. C'est ce qui montre que notre application est intéressante.
+
+12
+00:01:07.000 --> 00:01:10.000
+Parlons de notre équipe. Qui est derrière notre projet ?
+
+13
+00:01:10.000 --> 00:01:18.000
+Vous pouvez commencer par moi. Je suis le chef d'équipe qui vous rassemble tous, qui guide les équipes vers l'avant et nous donne une nouvelle idée.
+
+14
+00:01:18.000 --> 00:01:27.000
+En fait, je travaille toujours sur la partie frenden. Autrement dit, ce que vous voyez sur le site Web, le bouton du champ d'eau, est entièrement réalisé par moi.
+
+15
+00:01:28.000 --> 00:01:34.000
+Je suis responsable du backemd, la partie distante de la base de données et de l'API.
+
+16
+00:01:34.000 --> 00:01:36.000
+Qui d’autre fait partie de notre équipe ?
+
+17
+00:01:36.000 --> 00:01:40.000
+Commençons probablement par la personne principale. Voici Kell Donegov, notre directeur général.
+
+18
+00:01:40.000 --> 00:01:46.000
+C'est avec son aide que vous pourrez consulter nos commandes et nous connaître.
+
+19
+00:01:46.000 --> 00:01:52.000
+Il publie également une tonne de posts sympas pour nos réseaux sociaux. Nous sommes très fiers.
+
+20
+00:01:53.000 --> 00:02:00.000
+Artyom Agapkin travaille également pour nous. Il teste notre application afin que vous, l'utilisateur, ne voyiez aucun bug derrière nous.
+
+21
+00:02:00.000 --> 00:02:09.000
+Je veux aussi élaborer un peu, je fais du montage vidéo. Nous avons même préparé un terrain fragile pour faucher la société et YouTube.
+
+22
+00:02:09.000 --> 00:02:15.000
+Nous échangeons constamment des idées et essayons d'améliorer notre projet.
+
+23
+00:02:15.000 --> 00:02:19.000
+Kiryu, s'il te plaît, dis-nous en plus sur la légende urbaine.
+
+24
+00:02:19.000 --> 00:02:24.000
+Graskorgendy est un guide personnel des villes russes, dans lequel il plaisante lui-même avec l'utilisateur.
+
+25
+00:02:24.000 --> 00:02:30.000
+Nous voulons que chacun puisse partager son shrut préféré et aider d'autres gymnases à découvrir de nouveaux endroits.
+
+26
+00:02:30.000 --> 00:02:33.000
+Ouais, et maintenant je suis décroché et sans téléphone.
+
+27
+00:02:34.000 --> 00:02:36.000
+En quoi notre application est-elle différente des autres ?
+
+28
+00:02:36.000 --> 00:02:43.000
+La principale chose qui nous différencie est la communauté. Nos utilisateurs créent eux-mêmes le contenu, ils suivent ceux déjà préparés.
+
+29
+00:02:43.000 --> 00:02:47.000
+Cela rend l'application vivante et unique.
+
+30
+00:02:47.000 --> 00:02:52.000
+Et je voudrais également annoncer que la version alpha des applications sortira ce mois-ci.
+
+31
+00:02:52.000 --> 00:02:55.000
+Et tout le monde parmi vous peut y participer.
+
+32
+00:02:55.000 --> 00:03:01.000
+Ivan, parlez-nous plus en détail de la partie technique. Comment développer un cormoran ?
+
+33
+00:03:01.000 --> 00:03:07.000
+Nous utilisons Chang et la bibliothèque Chang.js.pr. pour créer une API.
+
+34
+00:03:07.000 --> 00:03:16.000
+Il n'y aura pas de backend dans la version alpha. Nous utiliserons le temps consacré à la solution Firebase pour que les tests soient opérationnels plus rapidement.
+
+35
+00:03:17.000 --> 00:03:22.000
+Oui, mais déjà dans la bataille, un bakant à part entière apparaîtra.
+
+36
+00:03:22.000 --> 00:03:29.000
+Il s'avère que les azodata seront d'abord dans SQLite, oui, la bonne est dans anashkillite.
+
+37
+00:03:29.000 --> 00:03:34.000
+Et maintenant la sortie de l'application mobile. Sera déjà utilisé avec opozbress.
+
+38
+00:03:34.000 --> 00:03:37.000
+D'accord, merci de m'avoir renseigné, Ivan.
+
+39
+00:03:38.000 --> 00:03:42.000
+Bon, bien sûr, ça complète quand même mon rôle.
+
+40
+00:03:42.000 --> 00:03:49.000
+Bzhangel, une solution éprouvée que nous utilisons dans des projets personnels ?
+
+41
+00:03:49.000 --> 00:03:56.000
+Puisque nous souhaitons que notre application soit développée en toute confiance, nous utilisons cette stack.
+
+42
+00:03:56.000 --> 00:04:03.000
+Intéressant. Il s'avère que maintenant le plus important est de tester l'application, et ensuite seulement de se fatiguer l'esprit, n'est-ce pas ?
+
+43
+00:04:03.000 --> 00:04:10.000
+Oui, c'est vrai. Nous ferons probablement tout étape par étape pour que l'application fonctionne sans aucun problème.
+
+44
+00:04:10.000 --> 00:04:13.440
+Les gars, quels sont vos projets pour l'avenir ?
+
+45
+00:04:13.440 --> 00:04:17.080
+Bon, nous en avons un gros, après la sortie de la version alpha.
+
+46
+00:04:17.080 --> 00:04:19.840
+Nous publierons dans cette version comme nous l'avons dit ci-dessus.
+
+47
+00:04:19.840 --> 00:04:22.880
+Et puis nous avancerons plus fortement,
+
+48
+00:04:22.880 --> 00:04:25.840
+c'est-à-dire via la publicité SEO d'autrui, peut-être de blogueurs, ou sur
+
+49
+00:04:25.840 --> 00:04:28.760
+plateforme de trading, telle que VK ou Yandex.
+
+50
+00:04:28.760 --> 00:04:32.160
+Nous allons nous étendre complètement pour pouvoir nous étendre
+
+51
+00:04:32.160 --> 00:04:35.120
+et l'ogorskorgende n'était pas seulement connu là-bas dans la région de Bova,
+
+52
+00:04:35.120 --> 00:04:36.680
+et les villes voisines.
+
+53
+00:04:36.680 --> 00:04:40.360
+Et en conséquence, je pensais qu'il y avait une nouvelle population plus importante avec Ingayu.
+
+54
+00:04:40.360 --> 00:04:44.640
+Nous souhaitons également créer un minibus personnel afin que
+
+55
+00:04:44.640 --> 00:04:47.520
+les villes pourraient être explorées seules.
+
+56
+00:04:47.520 --> 00:04:48.520
+Oui, super.
+
+57
+00:04:48.520 --> 00:04:51.600
+Mais je voudrais également ajouter que nous avons besoin de monétisation pour notre
+
+58
+00:04:51.600 --> 00:04:52.600
+communauté.
+
+59
+00:04:52.600 --> 00:04:55.360
+Nous souhaitons activer la monétisation dans Zen, VK et
+
+60
+00:04:55.360 --> 00:04:56.360
+Italie.
+
+61
+00:04:56.360 --> 00:04:59.760
+Et nous créerons probablement le futur Busti.
+
+62
+00:04:59.760 --> 00:05:02.760
+Eh bien, notre évasion est terminée, résumons-la
+
+63
+00:05:02.760 --> 00:05:03.760
+résultats.
+
+64
+00:05:03.760 --> 00:05:06.480
+En conséquence, je vous ai présenté plus près de l'équipe.
+
+65
+00:05:06.480 --> 00:05:09.760
+Nous avons compris ce qu'est une formidable légende, pourquoi elle
+
+66
+00:05:09.760 --> 00:05:10.760
+nécessaire.
+
+67
+00:05:10.760 --> 00:05:13.320
+Et en fait, le plan de développement s'est beaucoup rapproché de nous
+
+68
+00:05:13.320 --> 00:05:14.320
+plus près.
+
+69
+00:05:14.320 --> 00:05:16.720
+Merci à tous pour cela.
+
+70
+00:05:16.720 --> 00:05:19.760
+Nous continuons à travailler et vous ravissons avec de nouvelles fonctionnalités.
+
+71
+00:05:19.760 --> 00:05:28.440
+Je m'appelle Kirill Proskuren.
+
+72
+00:05:28.440 --> 00:05:31.360
+Vous pouvez dire non, d'accord, je suis anu maintenant.
+
+73
+00:05:31.360 --> 00:05:33.360
+Je suis responsable des abackents.
+
+74
+00:05:33.360 --> 00:05:37.320
+C'est pour Ana.
+
+75
+00:05:37.320 --> 00:05:42.000
+Mes amis, parlez-nous de...
+
+76
+00:05:42.000 --> 00:05:43.000
+Amis.
+
+77
+00:05:43.000 --> 00:05:52.320
+Ivan, s'il te plaît, parle-nous de...
+
+78
+00:05:52.320 --> 00:05:56.160
+Frapper, frapper, frapper, frapper, frapper, frapper, frapper, frapper, frapper.
+
+79
+00:05:56.160 --> 00:05:57.160
+Nous le disons comme la fin des erreurs.
+
+80
+00:05:57.160 --> 00:05:58.160
+Cette année.
+
+81
+00:05:58.160 --> 00:06:00.160
+Alors, d'accord, dans le futur.
+
+82
+00:06:00.160 --> 00:06:02.160
+Donc, je serai plein de nous.
+
+83
+00:06:02.160 --> 00:06:05.160
+Nous serons très heureux.
+
+84
+00:06:05.160 --> 00:06:06.160
+Quoi?
+
+85
+00:06:06.160 --> 00:06:16.160
+Donc, nous allons certainement faire une lamena.
+
+86
+00:06:16.160 --> 00:06:19.160
+Et nous le publierons là où il n’y aura pas de gros mots.
+
+87
+00:06:19.160 --> 00:06:28.120
+Que dit la 3D à quelqu’un quand celui-ci est d’humeur dépressive ?
+
+88
+00:06:28.120 --> 00:06:37.120
+Écoute, ne touche pas.
+
+89
+00:06:37.120 --> 00:06:41.120
+Maintenant tu me conduis, Tyura, Nurvan Soborov, pose le clip.
+
+90
+00:06:41.120 --> 00:06:45.120
+Ou une scène supprimée du film Joker 2.
+
+91
+00:06:45.120 --> 00:06:48.120
+Et aussi du café, je voudrais préciser.
+
+92
+00:06:48.120 --> 00:06:49.120
+C'est Zakir.
+
+93
+00:06:49.120 --> 00:06:51.120
+Merci.
+
+94
+00:06:51.120 --> 00:06:54.120
+C'est aussi une blague.
+
+95
+00:06:54.120 --> 00:06:58.120
+Obtenez ça les gars de votre ami.
+
+96
+00:06:58.120 --> 00:07:00.120
+Qui est ton père ?
+
+97
+00:07:00.120 --> 00:07:02.120
+Deuxième père Mike Uzhekson.
+
+98
+00:07:02.120 --> 00:07:03.120
+Prouvez-le.
+
+99
+00:07:03.120 --> 00:07:06.120
+Deuxième père, débarrasse-toi de ton visage et redeviens blanc.
+
+100
+00:07:06.120 --> 00:07:10.120
+Non, Vasilnik, eh bien, je vais te parler de ce garçon qui est tout sur son bureau.
+
+101
+00:07:10.120 --> 00:07:12.120
+J'ai demandé 5 minutes, ce qui...
+
+102
+00:07:12.120 --> 00:07:14.120
+Oh, n'est-ce pas, je me suis détourné.
+
+103
+00:07:14.120 --> 00:07:20.120
+Alors, oui, oui, oui, oui, oui, oui, oui, oui, oui, oui, oui, oui, oui, oui.
+
+104
+00:07:20.120 --> 00:07:24.120
+A votre attention, l'escargot n'a plus de mucus.
+

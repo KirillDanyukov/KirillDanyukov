@@ -1,0 +1,418 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.000
+Hello everyone, you hear the photo book, slam me, the presenter and director of Kiriodannikov.
+
+2
+00:00:06.000 --> 00:00:13.000
+Also our guests are the founder of bukfotok, proskorin Kirio and bkentr developer, Nechai FIVAN.
+
+3
+00:00:13.000 --> 00:00:21.000
+Hello everyone, guys, it’s great that you joined us. Today we will tell you a lot of interesting things about Kipevsha.
+
+4
+00:00:24.000 --> 00:00:29.000
+Hello everyone, I will be glad to tell you about our application about the technical country.
+
+5
+00:00:31.000 --> 00:00:35.000
+With that, we will begin. I want to express my deep gratitude for your donations.
+
+6
+00:00:35.000 --> 00:00:39.000
+Thanks to your donations, we receive a salary.
+
+7
+00:00:39.000 --> 00:00:44.000
+They should, but this is a young man, I would like to spend a drink, in my opinion.
+
+8
+00:00:44.000 --> 00:00:48.000
+No, listen, this is very important. We sat without the Newbs.
+
+9
+00:00:48.000 --> 00:00:52.000
+And your donations, your support, and kind words are always useful to us.
+
+10
+00:00:52.000 --> 00:00:59.000
+If you bet on everything, you came a lot more often, then our team will only develop forward.
+
+11
+00:01:00.000 --> 00:01:07.000
+Yes, it's true. Community support is priceless. This is what shows that our application is interesting.
+
+12
+00:01:07.000 --> 00:01:10.000
+Let's talk about our team. Who is behind our project?
+
+13
+00:01:10.000 --> 00:01:18.000
+You can start with me. I am the team leader who brought you all together, who guides the teams forward and gives us a new idea.
+
+14
+00:01:18.000 --> 00:01:27.000
+As a matter of fact, I’m still working on the frenden part. That is, what you see on the website, the water field button, is all done by me.
+
+15
+00:01:28.000 --> 00:01:34.000
+I am responsible for backemd, the remote part of the database and API.
+
+16
+00:01:34.000 --> 00:01:36.000
+Who else is on our team?
+
+17
+00:01:36.000 --> 00:01:40.000
+Let's start with, probably, the main person. This is Kell Donegov, our chief executive.
+
+18
+00:01:40.000 --> 00:01:46.000
+It is with his help that you can watch our orders and know about us.
+
+19
+00:01:46.000 --> 00:01:52.000
+He also makes a ton of cool posts for our social networks. We are very proud.
+
+20
+00:01:53.000 --> 00:02:00.000
+Artyom Agapkin also works for us. He is testing our application so that you, the user, do not see any bugs behind us.
+
+21
+00:02:00.000 --> 00:02:09.000
+I also want to elaborate a little, I’m doing video editing. We set even shaky ground for our mowing down of society and YouTube.
+
+22
+00:02:09.000 --> 00:02:15.000
+We constantly exchange ideas and try to make our project better.
+
+23
+00:02:15.000 --> 00:02:19.000
+Kiryu, please tell us more about the urban legend.
+
+24
+00:02:19.000 --> 00:02:24.000
+Graskorgendy is a personal guide to Russian cities, in which he jokes with the user himself.
+
+25
+00:02:24.000 --> 00:02:30.000
+We want everyone to be able to share their favorite shrut and help other gyms discover new places.
+
+26
+00:02:30.000 --> 00:02:33.000
+Yeah, and now I'm off the hook and without a phone.
+
+27
+00:02:34.000 --> 00:02:36.000
+How is our application different from others?
+
+28
+00:02:36.000 --> 00:02:43.000
+The main thing that differentiates us is the community. Our users create the content themselves, they follow the already prepared ones.
+
+29
+00:02:43.000 --> 00:02:47.000
+This makes the application alive and unique.
+
+30
+00:02:47.000 --> 00:02:52.000
+And I would also like to announce that the alpha version of the applications will be released this month.
+
+31
+00:02:52.000 --> 00:02:55.000
+And everyone from you can poke into it.
+
+32
+00:02:55.000 --> 00:03:01.000
+Ivan, please tell us in more detail about the technical part. How do you develop a cormorant?
+
+33
+00:03:01.000 --> 00:03:07.000
+We use Chang and the Chang.js.pr library. to create an API.
+
+34
+00:03:07.000 --> 00:03:16.000
+There will be no backend in the alpha version. We will use the firebase solution time to get testing up and running faster.
+
+35
+00:03:17.000 --> 00:03:22.000
+Yes, but already in the battle a full-fledged bakant will appear.
+
+36
+00:03:22.000 --> 00:03:29.000
+It turns out that the azodata will first be in SQLite, yes, the correct one is in anashkillite.
+
+37
+00:03:29.000 --> 00:03:34.000
+And now the release from the mobile application. Will already be used with opozbress.
+
+38
+00:03:34.000 --> 00:03:37.000
+Okay, thank you for filling me in, Ivan.
+
+39
+00:03:38.000 --> 00:03:42.000
+Well, of course, it still complements my part.
+
+40
+00:03:42.000 --> 00:03:49.000
+Bzhanget, a proven solution that we use in personal projects?
+
+41
+00:03:49.000 --> 00:03:56.000
+Since we want our application to be developed with confidence, we use this stack.
+
+42
+00:03:56.000 --> 00:04:03.000
+Interesting. It turns out that now the most important thing is to test the application, and only then tire out its mind, right?
+
+43
+00:04:03.000 --> 00:04:10.000
+Yes, that's right. We will most likely do everything step by step so that the application works without any problems.
+
+44
+00:04:10.000 --> 00:04:13.440
+Guys, what are your plans for the future?
+
+45
+00:04:13.440 --> 00:04:17.080
+Okay, we have a big one, after the release of the alpha version.
+
+46
+00:04:17.080 --> 00:04:19.840
+We will release in this version as we said above.
+
+47
+00:04:19.840 --> 00:04:22.880
+And then we will advance more strongly,
+
+48
+00:04:22.880 --> 00:04:25.840
+that is, through SEO advertising of others, perhaps bloggers, or on
+
+49
+00:04:25.840 --> 00:04:28.760
+trading platform, such as VK or Yandex.
+
+50
+00:04:28.760 --> 00:04:32.160
+We will expand completely so that we can expand
+
+51
+00:04:32.160 --> 00:04:35.120
+and ogorskorgende was known not only there by the Bova region,
+
+52
+00:04:35.120 --> 00:04:36.680
+and nearby cities.
+
+53
+00:04:36.680 --> 00:04:40.360
+And accordingly, I thought there was a new larger population with Ingayu.
+
+54
+00:04:40.360 --> 00:04:44.640
+We also want to create a personal minibus so that
+
+55
+00:04:44.640 --> 00:04:47.520
+cities could be explored alone.
+
+56
+00:04:47.520 --> 00:04:48.520
+Yes, great.
+
+57
+00:04:48.520 --> 00:04:51.600
+But I would also like to add that we need monetization for our
+
+58
+00:04:51.600 --> 00:04:52.600
+community.
+
+59
+00:04:52.600 --> 00:04:55.360
+We want to enable monetization in Zen, VK and
+
+60
+00:04:55.360 --> 00:04:56.360
+Italy.
+
+61
+00:04:56.360 --> 00:04:59.760
+And we will probably create the future Busti.
+
+62
+00:04:59.760 --> 00:05:02.760
+Well, our escape has come to an end, let's sum it up
+
+63
+00:05:02.760 --> 00:05:03.760
+results.
+
+64
+00:05:03.760 --> 00:05:06.480
+As a result, I introduced you closer to the team.
+
+65
+00:05:06.480 --> 00:05:09.760
+We figured out what a formidable legend is, why it
+
+66
+00:05:09.760 --> 00:05:10.760
+needed.
+
+67
+00:05:10.760 --> 00:05:13.320
+And as a matter of fact, the development plan has come much closer to us
+
+68
+00:05:13.320 --> 00:05:14.320
+closer.
+
+69
+00:05:14.320 --> 00:05:16.720
+Thanks everyone for this.
+
+70
+00:05:16.720 --> 00:05:19.760
+We continue to work and delight you with new features.
+
+71
+00:05:19.760 --> 00:05:28.440
+I am Kirill proskuren.
+
+72
+00:05:28.440 --> 00:05:31.360
+You can say, no, okay, I’m anu now.
+
+73
+00:05:31.360 --> 00:05:33.360
+I am responsible for the abakent.
+
+74
+00:05:33.360 --> 00:05:37.320
+This is for Ana.
+
+75
+00:05:37.320 --> 00:05:42.000
+Friends, please tell us about...
+
+76
+00:05:42.000 --> 00:05:43.000
+Friends.
+
+77
+00:05:43.000 --> 00:05:52.320
+Ivan, please tell us about...
+
+78
+00:05:52.320 --> 00:05:56.160
+Hit, hit, hit, hit, hit, hit, hit, hit, hit.
+
+79
+00:05:56.160 --> 00:05:57.160
+We put it as the end of the blunders.
+
+80
+00:05:57.160 --> 00:05:58.160
+This year.
+
+81
+00:05:58.160 --> 00:06:00.160
+So, okay, in the future.
+
+82
+00:06:00.160 --> 00:06:02.160
+So, I'll be full of us.
+
+83
+00:06:02.160 --> 00:06:05.160
+We will be very happy.
+
+84
+00:06:05.160 --> 00:06:06.160
+What?
+
+85
+00:06:06.160 --> 00:06:16.160
+So, we will definitely make a lamena.
+
+86
+00:06:16.160 --> 00:06:19.160
+And we’ll post it where there are no swear words.
+
+87
+00:06:19.160 --> 00:06:28.120
+What does 3D say to another when that one is in a depressed mood?
+
+88
+00:06:28.120 --> 00:06:37.120
+Look, don't touch.
+
+89
+00:06:37.120 --> 00:06:41.120
+Now you are driving me, Tyura, Nurvan Soborov, puts down the clip.
+
+90
+00:06:41.120 --> 00:06:45.120
+Or a deleted scene from the movie Joker 2.
+
+91
+00:06:45.120 --> 00:06:48.120
+And also coffee, I would like to clarify.
+
+92
+00:06:48.120 --> 00:06:49.120
+This is Zakir.
+
+93
+00:06:49.120 --> 00:06:51.120
+Thank you.
+
+94
+00:06:51.120 --> 00:06:54.120
+Also a joke.
+
+95
+00:06:54.120 --> 00:06:58.120
+Get this guys from your friend.
+
+96
+00:06:58.120 --> 00:07:00.120
+Who is your father?
+
+97
+00:07:00.120 --> 00:07:02.120
+Second father Mike Uzhekson.
+
+98
+00:07:02.120 --> 00:07:03.120
+Prove it.
+
+99
+00:07:03.120 --> 00:07:06.120
+Second father, get rid of your face and become white again.
+
+100
+00:07:06.120 --> 00:07:10.120
+No, Vasilnik, well, I’ll tell you about this boy who is all on his desk.
+
+101
+00:07:10.120 --> 00:07:12.120
+I asked for 5 minutes, which...
+
+102
+00:07:12.120 --> 00:07:14.120
+Oh, didn't I, I turned away.
+
+103
+00:07:14.120 --> 00:07:20.120
+So, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes.
+
+104
+00:07:20.120 --> 00:07:24.120
+For your attention, the snail is out of mucus.
+

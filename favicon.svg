@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <!-- Fluffy red wig left -->
+  <circle cx="6"  cy="12" r="4" fill="#FF5555" stroke="#cc2222" stroke-width="1"/>
+  <circle cx="4"  cy="17" r="4" fill="#FF5555" stroke="#cc2222" stroke-width="1"/>
+  <circle cx="6"  cy="22" r="4" fill="#FF5555" stroke="#cc2222" stroke-width="1"/>
+  <!-- Fluffy red wig right -->
+  <circle cx="34" cy="12" r="4" fill="#FF5555" stroke="#cc2222" stroke-width="1"/>
+  <circle cx="36" cy="17" r="4" fill="#FF5555" stroke="#cc2222" stroke-width="1"/>
+  <circle cx="34" cy="22" r="4" fill="#FF5555" stroke="#cc2222" stroke-width="1"/>
+  <!-- Face -->
+  <path d="M6,16 C6,8 12,5 20,5 C28,5 34,8 34,16 C34,26 28,34 20,34 C12,34 6,26 6,16 Z" fill="#FFFFFF" stroke="#2C2416" stroke-width="2"/>
+  <!-- Eyes -->
+  <circle cx="14" cy="14" r="2" fill="#2C2416"/>
+  <circle cx="26" cy="14" r="2" fill="#2C2416"/>
+  <!-- Red nose -->
+  <circle cx="20" cy="18" r="4.5" fill="#FF3333" stroke="#B31414" stroke-width="1"/>
+  <!-- Smile -->
+  <path d="M13,23 Q20,29 27,23" stroke="#2C2416" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>
