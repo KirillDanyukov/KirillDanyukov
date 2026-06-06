@@ -1250,3 +1250,110 @@ body {
     padding: 30px 16px 12px !important;
   }
 }
+
+/* ================================================================
+   LANGUAGE SWITCHER
+   ================================================================ */
+.lang-switcher {
+  position: fixed;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.lang-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--sketch-border);
+  box-shadow: 0 3px 14px rgba(0,0,0,0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pencil);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.lang-btn svg {
+  width: 26px;
+  height: 26px;
+}
+
+.lang-btn:hover {
+  background: #f5ede0;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.22);
+  transform: scale(1.08);
+}
+
+.lang-dropdown {
+  display: none;
+  flex-direction: column;
+  background: var(--paper);
+  border: 2px solid var(--sketch-border);
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  margin-top: 8px;
+  min-width: 148px;
+  overflow: hidden;
+  animation: langFadeIn 0.18s ease;
+}
+
+.lang-dropdown.open {
+  display: flex;
+}
+
+@keyframes langFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.lang-option {
+  background: none;
+  border: none;
+  padding: 9px 16px;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.lang-option:hover {
+  background: #f5ede0;
+}
+
+.lang-option.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .lang-switcher {
+    right: 12px;
+    top: auto;
+    bottom: 18px;
+    transform: none;
+  }
+  .lang-dropdown {
+    bottom: calc(100% + 8px);
+    top: auto;
+    right: 0;
+  }
+  .lang-btn {
+    width: 44px;
+    height: 44px;
+  }
+  .lang-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}
