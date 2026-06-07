@@ -561,7 +561,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1001;
+  z-index: 100000;
   transition: transform 0.2s;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
@@ -1434,4 +1434,10 @@ body {
     width: 22px;
     height: 22px;
   }
+}
+
+/* Hide language switcher when photo lightbox or video modal is active */
+#photoModal.active ~ #langSwitcher,
+#videoModal.active ~ #langSwitcher {
+  display: none !important;
 }

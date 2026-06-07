@@ -2,417 +2,388 @@ WEBVTT
 
 1
 00:00:00.000 --> 00:00:06.000
-Hallo zusammen, ihr hört das Fotobuch, slam mich, den Moderator und Regisseur von Kiriodannikov.
+Hallo zusammen! Ihr hört BigFoot Talk. Bei euch bin ich, Moderator und Art-Direktor Kirill Danyukov.
 
 2
 00:00:06.000 --> 00:00:13.000
-Zu unseren Gästen zählen auch der Gründer von Bukfotok, Proskorin Kirio, und der Bkentr-Entwickler Nechai FIVAN.
+Außerdem sind bei uns zu Gast der Gründer von BigFoot — Proskurin Kirill und Backend-Entwickler Nechaev Ivan.
 
 3
 00:00:13.000 --> 00:00:21.000
-Hallo zusammen, Leute, es ist toll, dass ihr dabei seid. Heute erzählen wir Ihnen viel Interessantes über Kipevsha.
+Hallo zusammen! Wir freuen uns sehr, dass ihr euch uns angeschlossen habt. Wir werden heute viel Interessantes und Aufgestautes erzählen.
 
 4
 00:00:24.000 --> 00:00:29.000
-Hallo zusammen, ich erzähle Ihnen gerne von unserer Bewerbung zum technischen Land.
+Hallo zusammen! Ich freue mich, euch über die technische Seite unserer App zu berichten.
 
 5
 00:00:31.000 --> 00:00:35.000
-Damit beginnen wir. Ich möchte Ihnen meinen herzlichen Dank für Ihre Spenden aussprechen.
+Bevor wir beginnen, möchte ich euch für eure Spenden herzlich danken.
 
 6
 00:00:35.000 --> 00:00:39.000
-Dank Ihrer Spenden erhalten wir ein Gehalt.
+Dank eurer Spenden bekommen wir unser Gehalt.
 
 7
 00:00:39.000 --> 00:00:44.000
-Das sollten sie, aber das ist ein junger Mann, ich würde meiner Meinung nach gerne etwas trinken gehen.
+Na ja, eigentlich sollten wir, aber dieser junge Mann hat alles für Lavalier-Mikrofone ausgegeben — auf meine Idee hin.
 
 8
 00:00:44.000 --> 00:00:48.000
-Nein, hör zu, das ist sehr wichtig. Wir saßen ohne die Newbs.
+Nein, hört mal, Lavalier-Mikrofone sind wichtig. Wir würden sonst ohne sie dasitzen.
 
 9
 00:00:48.000 --> 00:00:52.000
-Und Ihre Spenden, Ihre Unterstützung und Ihre freundlichen Worte sind für uns immer nützlich.
+Aber so sind eure Spenden, eure Unterstützung und warmen Worte immer für uns wertvoll.
 
 10
 00:00:52.000 --> 00:00:59.000
-Wenn man auf alles setzt, viel öfter kommt, dann wird sich unsere Mannschaft nur nach vorne entwickeln.
+Wenn ihr all das viel öfter hinterlasst, wird unser Team sich nur vorwärts entwickeln.
 
 11
 00:01:00.000 --> 00:01:07.000
-Ja, das stimmt. Die Unterstützung der Gemeinschaft ist unbezahlbar. Das zeigt, dass unsere Bewerbung interessant ist.
+Ja, das stimmt. Die Unterstützung der Community ist unbezahlbar. Sie zeigt genau, dass unsere App interessant ist.
 
 12
 00:01:07.000 --> 00:01:10.000
-Lassen Sie uns über unser Team sprechen. Wer steht hinter unserem Projekt?
+Lasst uns über unser Team reden. Wer steckt hinter unserem Projekt?
 
 13
 00:01:10.000 --> 00:01:18.000
-Du kannst mit mir anfangen. Ich bin der Teamleiter, der Sie alle zusammengebracht hat, der die Teams voranführt und uns eine neue Idee gibt.
+Ich kann mit mir anfangen. Ich bin der Teamleiter, der euch alle zusammengebracht hat, das Team vorwärts führt und uns neue Ideen bringt.
 
 14
 00:01:18.000 --> 00:01:27.000
-Tatsächlich arbeite ich immer noch am Frenden-Teil. Das heißt, was Sie auf der Website sehen, der Wasserfeld-Button, ist alles von mir gemacht.
+Außerdem kümmere ich mich noch um das Frontend, also das, was ihr auf der Website seht: Schaltflächen, Eingabefelder. Das alles mache ich.
 
 15
 00:01:28.000 --> 00:01:34.000
-Ich bin verantwortlich für backemd, den Remote-Teil der Datenbank und API.
+Ich bin für das Backend zuständig: Serverseite, Datenbank und API.
 
 16
 00:01:34.000 --> 00:01:36.000
-Wer ist sonst noch in unserem Team?
+Und wer ist sonst noch in unserem Team?
 
 17
 00:01:36.000 --> 00:01:40.000
-Beginnen wir wahrscheinlich mit der Hauptperson. Das ist Kell Donegov, unser Geschäftsführer.
+Wir beginnen wahrscheinlich mit dem wichtigsten Menschen. Das ist Kirill Danyukov, unser Art-Direktor.
 
 18
 00:01:40.000 --> 00:01:46.000
-Mit seiner Hilfe können Sie unsere Bestellungen verfolgen und mehr über uns erfahren.
+Dank ihm könnt ihr unseren Podcast schauen und von uns wissen.
 
 19
 00:01:46.000 --> 00:01:52.000
-Er macht auch jede Menge coole Beiträge für unsere sozialen Netzwerke. Wir sind sehr stolz.
+Außerdem macht er eine Menge toller Beiträge für unsere sozialen Netzwerke. Darauf sind wir sehr stolz.
 
 20
 00:01:53.000 --> 00:02:00.000
-Artyom Agapkin arbeitet auch für uns. Er testet unsere Anwendung, damit Sie als Benutzer keine Fehler hinter uns sehen.
+Außerdem arbeitet bei uns Artjom Agapkin. Er kümmert sich um das Testen unserer App, damit ihr als Nutzer nicht alle unsere Fehler zu sehen bekommt.
 
 21
 00:02:00.000 --> 00:02:09.000
-Ich möchte auch etwas näher darauf eingehen, ich mache Videobearbeitung. Wir haben die Zerstörung der Gesellschaft und von YouTube noch auf wackeligen Füßen gestellt.
+Ich möchte noch ein bisschen über mich hinzufügen: Ich kümmere mich um den Videoschnitt. Wir haben auch das Banner für unsere VK-Gruppe und unseren YouTube-Kanal erstellt.
 
 22
 00:02:09.000 --> 00:02:15.000
-Wir tauschen uns ständig aus und versuchen, unser Projekt besser zu machen.
+Wir tauschen ständig Ideen aus und versuchen, unser Projekt besser zu machen.
 
 23
 00:02:15.000 --> 00:02:19.000
-Kiryu, bitte erzähl uns mehr über die urbane Legende.
+Kirill, erzählt bitte ausführlicher über die Stadtlegende.
 
 24
 00:02:19.000 --> 00:02:24.000
-Graskorgendy ist ein persönlicher Reiseführer durch russische Städte, in dem er mit dem Benutzer selbst scherzt.
+„Stadtlegende" ist ein persönlicher Reiseführer durch die Städte Russlands, in dem die Nutzer selbst Routen erstellen.
 
 25
 00:02:24.000 --> 00:02:30.000
-Wir möchten, dass jeder sein Lieblings-Shrut teilen und anderen Fitnessstudios dabei helfen kann, neue Orte zu entdecken.
+Wir möchten, dass jeder seine Lieblingsroute teilen und anderen helfen kann, neue Orte zu entdecken.
 
 26
 00:02:30.000 --> 00:02:33.000
-Ja, und jetzt bin ich frei und ohne Telefon.
+Aha, und jetzt noch einmal von vorne und ohne Handy.
 
 27
 00:02:34.000 --> 00:02:36.000
-Wie unterscheidet sich unsere Anwendung von anderen?
+Was unterscheidet unsere App von anderen?
 
 28
 00:02:36.000 --> 00:02:43.000
-Das Wichtigste, was uns auszeichnet, ist die Gemeinschaft. Unsere Benutzer erstellen die Inhalte selbst, sie folgen den bereits vorbereiteten.
+Das Wichtigste — unser Unterschied ist die Community. Bei uns erstellen die Nutzer selbst Inhalte, sie folgen bereits fertigen.
 
 29
 00:02:43.000 --> 00:02:47.000
-Dies macht die Anwendung lebendig und einzigartig.
+Das macht die App lebendig und einzigartig.
 
 30
 00:02:47.000 --> 00:02:52.000
-Und ich möchte auch bekannt geben, dass die Alpha-Version der Anwendungen noch in diesem Monat veröffentlicht wird.
+Außerdem möchten wir ankündigen, dass in diesem Monat die Alpha-Version der App veröffentlicht wird.
 
 31
 00:02:52.000 --> 00:02:55.000
-Und jeder von Ihnen kann hineinschnuppern.
+Und jeder von euch kann sie ausprobieren.
 
 32
 00:02:55.000 --> 00:03:01.000
-Ivan, erzähl uns bitte etwas mehr über den technischen Teil. Wie entwickelt man einen Kormoran?
+Ivan, erzählt bitte ausführlicher über den technischen Teil. Wie entwickelt ihr das Backend?
 
 33
 00:03:01.000 --> 00:03:07.000
-Wir verwenden Chang und die Chang.js.pr-Bibliothek. um eine API zu erstellen.
+Wir verwenden Django und dessen Bibliothek zur Erstellung von APIs.
 
 34
 00:03:07.000 --> 00:03:16.000
-In der Alpha-Version wird es kein Backend geben. Wir werden die Zeit der Firebase-Lösung nutzen, um Tests schneller zum Laufen zu bringen.
+In der Alpha-Version wird es kein Backend geben. Wir werden eine temporäre Lösung mit Firebase verwenden, um das Testen schneller zu starten.
 
 35
 00:03:17.000 --> 00:03:22.000
-Ja, aber bereits im Kampf wird ein vollwertiger Bakant erscheinen.
+Aber schon in der Beta-Version wird ein vollwertiges Backend erscheinen.
 
 36
 00:03:22.000 --> 00:03:29.000
-Es stellt sich heraus, dass die Azodaten zuerst in SQLite vorliegen werden, ja, die richtigen sind in Anashkillite.
+Das heißt, die Datenbank wird zunächst auf SQLite sein, ja, richtig Ivan — auf SQLite.
 
 37
 00:03:29.000 --> 00:03:34.000
-Und jetzt die Veröffentlichung aus der mobilen Anwendung. Wird bereits mit Opozbress verwendet.
+Und beim Release der mobilen App wird Firebase verwendet.
 
 38
 00:03:34.000 --> 00:03:37.000
-Okay, danke, dass du mich informiert hast, Ivan.
+Gut, danke, dass ihr mich ergänzt, Ivan.
 
 39
 00:03:38.000 --> 00:03:42.000
-Nun, natürlich ergänzt es trotzdem meinen Teil.
+Na klar ergänze ich — es ist schließlich mein Bereich.
 
 40
 00:03:42.000 --> 00:03:49.000
-Bzhanget, eine bewährte Lösung, die wir in persönlichen Projekten verwenden?
+Django ist eine bewährte Lösung, die wir in persönlichen Projekten verwenden.
 
 41
 00:03:49.000 --> 00:03:56.000
-Da wir möchten, dass unsere Anwendung sicher entwickelt wird, verwenden wir diesen Stack.
+Da wir möchten, dass unsere App sicher entwickelt wird, verwenden wir genau diesen Tech-Stack.
 
 42
 00:03:56.000 --> 00:04:03.000
-Interessant. Es stellt sich heraus, dass es jetzt am wichtigsten ist, die Anwendung zu testen und erst dann den Kopf zu ermüden, oder?
+Interessant, das bedeutet, das Wichtigste ist jetzt, die App zu testen, und danach erst zu skalieren, richtig?
 
 43
 00:04:03.000 --> 00:04:10.000
-Ja, das stimmt. Wir werden höchstwahrscheinlich alles Schritt für Schritt erledigen, damit die Anwendung problemlos funktioniert.
+Ja, genau. Wir versuchen, alles schrittweise zu machen, damit die App ohne Fehler funktioniert.
 
 44
 00:04:10.000 --> 00:04:13.440
-Leute, was sind eure Pläne für die Zukunft?
+Leute, welche Pläne habt ihr für die Zukunft?
 
 45
 00:04:13.440 --> 00:04:17.080
-Okay, wir haben ein großes Problem, nach der Veröffentlichung der Alpha-Version.
+Unsere Pläne sind grandios. Nach dem Release der Alpha-Version
 
 46
 00:04:17.080 --> 00:04:19.840
-Wir werden diese Version wie oben erwähnt veröffentlichen.
+werden wir die Beta-Version veröffentlichen, wie wir oben erwähnt haben.
 
 47
 00:04:19.840 --> 00:04:22.880
-Und dann werden wir stärker voranschreiten,
+Und danach werden wir uns aktiver vermarkten.
 
 48
 00:04:22.880 --> 00:04:25.840
-das heißt, durch SEO-Werbung anderer, vielleicht Blogger, oder anderer
+Das heißt, möglicherweise Werbung bei anderen Bloggern kaufen
 
 49
 00:04:25.840 --> 00:04:28.760
-Handelsplattform wie VK oder Yandex.
+oder auf zielgerichteten Plattformen wie VK oder Yandex.
 
 50
 00:04:28.760 --> 00:04:32.160
-Wir werden komplett expandieren, damit wir expandieren können
+Wir werden uns vollständig ausweiten, damit man von BigFoot
 
 51
 00:04:32.160 --> 00:04:35.120
-und Ogorskorgende war nicht nur dort in der Bova-Region bekannt,
+und der Stadtlegende nicht nur in der Region Tambow weiß
 
 52
 00:04:35.120 --> 00:04:36.680
-und nahegelegene Städte.
+und in den umliegenden Städten,
 
 53
 00:04:36.680 --> 00:04:40.360
-Und dementsprechend dachte ich, dass es mit Ingayu eine neue größere Bevölkerung gibt.
+sondern entsprechend einem größeren Teil der GUS-Bevölkerung.
 
 54
 00:04:40.360 --> 00:04:44.640
-Dafür wollen wir auch einen persönlichen Kleinbus schaffen
+Außerdem möchten wir persönliche Routen erstellen, damit
 
 55
 00:04:44.640 --> 00:04:47.520
-Städte könnten alleine erkundet werden.
+man Städte auch alleine erkunden kann.
 
 56
 00:04:47.520 --> 00:04:48.520
-Ja, großartig.
+Ja, ausgezeichnet.
 
 57
-00:04:48.520 --> 00:04:51.600
-Aber ich möchte auch hinzufügen, dass wir für unsere Monetarisierung brauchen
+00:04:48.520 --> 00:04:52.600
+Aber was ich noch hinzufügen würde: Wir brauchen Monetarisierung für unsere Community.
 
 58
-00:04:51.600 --> 00:04:52.600
-Gemeinschaft.
+00:04:52.600 --> 00:04:56.360
+Wir möchten die Monetarisierung in Dzen, VK und auf YouTube aktivieren.
 
 59
-00:04:52.600 --> 00:04:55.360
-Wir möchten die Monetarisierung in Zen, VK und ermöglichen
+00:04:56.360 --> 00:04:59.760
+Und wahrscheinlich werden wir in Zukunft einen Boosty-Account erstellen.
 
 60
-00:04:55.360 --> 00:04:56.360
-Italien.
+00:04:59.760 --> 00:05:03.760
+Na was, unsere Folge ist zu Ende. Lasst uns ein Fazit ziehen.
 
 61
-00:04:56.360 --> 00:04:59.760
-Und wir werden wahrscheinlich den zukünftigen Busti erschaffen.
+00:05:03.760 --> 00:05:06.480
+Schau, als Fazit habe ich euch mein Team nähergbracht.
 
 62
-00:04:59.760 --> 00:05:02.760
-Nun, unsere Flucht ist zu Ende, fassen wir es zusammen
+00:05:06.480 --> 00:05:10.760
+Wir haben geklärt, was die Stadtlegende ist und wozu sie dient.
 
 63
-00:05:02.760 --> 00:05:03.760
-Ergebnisse.
+00:05:10.760 --> 00:05:14.320
+Und mit dem Entwicklungsplan seid ihr uns nun viel nähergekommen.
 
 64
-00:05:03.760 --> 00:05:06.480
-Dadurch habe ich Ihnen das Team näher gebracht.
+00:05:14.320 --> 00:05:16.720
+Vielen Dank euch allen dafür.
 
 65
-00:05:06.480 --> 00:05:09.760
-Wir haben herausgefunden, was eine beeindruckende Legende ist und warum
+00:05:16.720 --> 00:05:19.760
+Wir arbeiten weiter und erfreuen euch mit neuen Features.
 
 66
-00:05:09.760 --> 00:05:10.760
-benötigt.
+00:05:19.760 --> 00:05:28.440
+Ich bin Kirill Proskurin.
 
 67
-00:05:10.760 --> 00:05:13.320
-Und tatsächlich ist der Entwicklungsplan uns viel näher gekommen
+00:05:28.440 --> 00:05:31.360
+Man könnte sa... nein, egal, noch einmal.
 
 68
-00:05:13.320 --> 00:05:14.320
-näher.
+00:05:31.360 --> 00:05:33.360
+Ich bin fürs Backend zuständig.
 
 69
-00:05:14.320 --> 00:05:16.720
-Vielen Dank an alle dafür.
+00:05:33.360 --> 00:05:37.320
+Das... noch einmal ich.
 
 70
-00:05:16.720 --> 00:05:19.760
-Wir arbeiten weiter und erfreuen Sie mit neuen Features.
+00:05:37.320 --> 00:05:42.000
+Kumpel, erzähl bitte über... (Zensur)
 
 71
-00:05:19.760 --> 00:05:28.440
-Ich bin Kirill proskuren.
+00:05:42.000 --> 00:05:43.000
+Kumpel.
 
 72
-00:05:28.440 --> 00:05:31.360
-Du kannst sagen: „Nein, okay, ich bin jetzt anu.“
+00:05:50.000 --> 00:05:52.320
+Ivan, erzählt bitte über...
 
 73
-00:05:31.360 --> 00:05:33.360
-Ich bin für das Abakent verantwortlich.
+00:05:52.320 --> 00:05:56.160
+(summen)
 
 74
-00:05:33.360 --> 00:05:37.320
-Das ist für Ana.
+00:05:56.160 --> 00:05:57.160
+Wir schneiden das am Ende als Outtakes rein.
 
 75
-00:05:37.320 --> 00:05:42.000
-Freunde, bitte erzählt uns von...
+00:05:58.160 --> 00:06:00.160
+So, okay, Pläne für die Zukunft.
 
 76
-00:05:42.000 --> 00:05:43.000
-Freunde.
+00:06:00.160 --> 00:06:02.160
+Welche Pläne haben wir für die Zukunft?
 
 77
-00:05:43.000 --> 00:05:52.320
-Ivan, bitte erzähl uns etwas über...
+00:06:12.160 --> 00:06:13.160
+Open the door.
 
 78
-00:05:52.320 --> 00:05:56.160
-Schlag, Schlag, Schlag, Schlag, Schlag, Schlag, Schlag, Schlag, Schlag.
-
-79
-00:05:56.160 --> 00:05:57.160
-Wir bezeichnen es als das Ende der Fehler.
-
-80
-00:05:57.160 --> 00:05:58.160
-Dieses Jahr.
-
-81
-00:05:58.160 --> 00:06:00.160
-Also, okay, in der Zukunft.
-
-82
-00:06:00.160 --> 00:06:02.160
-Also, ich werde voll von uns sein.
-
-83
-00:06:02.160 --> 00:06:05.160
-Wir werden uns sehr freuen.
-
-84
-00:06:05.160 --> 00:06:06.160
+00:06:13.160 --> 00:06:14.160
 Was?
 
+79
+00:06:14.160 --> 00:06:16.160
+Wir werden auf jeden Fall Clips machen.
+
+80
+00:06:16.160 --> 00:06:19.160
+Und veröffentlichen, wo keine Kraftausdrücke sind.
+
+81
+00:06:19.160 --> 00:06:28.120
+Was sagt eine Eisscholle zur anderen, wenn die eine schlechte Laune hat?
+
+82
+00:06:28.120 --> 00:06:37.120
+Pass auf, dreh nicht durch.
+
+83
+00:06:37.120 --> 00:06:41.120
+Und jetzt seht ihr eine Miniatur: Nurlan Saburov (kasachischer Stand-up-Comedian) verlegt Fliesen.
+
+84
+00:06:41.120 --> 00:06:45.120
+Oder eine herausgeschnittene Szene aus dem Film „Joker 2".
+
 85
-00:06:06.160 --> 00:06:16.160
-Wir werden also auf jeden Fall eine Lamena machen.
+00:06:45.120 --> 00:06:48.120
+Und noch etwas möchte ich klarstellen.
 
 86
-00:06:16.160 --> 00:06:19.160
-Und wir werden es dort veröffentlichen, wo es keine Schimpfwörter gibt.
-
-87
-00:06:19.160 --> 00:06:28.120
-Was sagt 3D einem anderen, wenn er deprimiert ist?
-
-88
-00:06:28.120 --> 00:06:37.120
-Schauen Sie, nicht anfassen.
-
-89
-00:06:37.120 --> 00:06:41.120
-Jetzt fährst du mich, Tyura, Nurvan Soborov, legt den Clip nieder.
-
-90
-00:06:41.120 --> 00:06:45.120
-Oder eine gelöschte Szene aus dem Film Joker 2.
-
-91
-00:06:45.120 --> 00:06:48.120
-Und auch Kaffee, möchte ich klarstellen.
-
-92
 00:06:48.120 --> 00:06:49.120
 Das ist Zakir.
 
-93
+87
 00:06:49.120 --> 00:06:51.120
-Danke schön.
+Danke.
 
-94
+88
 00:06:51.120 --> 00:06:54.120
-Auch ein Witz.
+Noch ein Witz:
 
-95
+89
 00:06:54.120 --> 00:06:58.120
-Holen Sie sich diese Jungs von Ihrem Freund.
+Ein Kind fragt seinen Freund:
 
-96
+90
 00:06:58.120 --> 00:07:00.120
 Wer ist dein Vater?
 
-97
+91
 00:07:00.120 --> 00:07:02.120
-Zweiter Vater Mike Uzhekson.
+Der andere antwortet: Mein Vater ist Michael Jackson.
 
-98
+92
 00:07:02.120 --> 00:07:03.120
-Beweisen Sie es.
+Der erste sagt zu ihm: „Beweise es."
 
-99
+93
 00:07:03.120 --> 00:07:06.120
-Zweiter Vater, entferne dein Gesicht und werde wieder weiß.
+Der zweite wischt sich das Gesicht ab und wurde aus schwarz weiß.
 
-100
+94
 00:07:06.120 --> 00:07:10.120
-Nein, Vasilnik, nun, ich erzähle dir von diesem Jungen, der ganz auf seinem Schreibtisch liegt.
+Lasst mich euch einen Witz über einen Jungen erzählen, der immer den Tisch bat.
 
-101
+95
 00:07:10.120 --> 00:07:12.120
-Ich habe um 5 Minuten gebeten, was...
+auf 5 Minuten, der...
 
-102
+96
 00:07:12.120 --> 00:07:14.120
-Oh, nicht wahr? Ich habe mich abgewandt.
+Nein, nein, nein, nein, nein, nein.
 
-103
-00:07:14.120 --> 00:07:20.120
-Also, ja, ja, ja, ja, ja, ja, ja, ja, ja, ja, ja, ja, ja, ja.
-
-104
+97
 00:07:20.120 --> 00:07:24.120
-Zu Ihrer Aufmerksamkeit: Die Schnecke hat keinen Schleim mehr.
-
+Zu eurer Information: Der Schnecke ist der Schleim ausgegangen.

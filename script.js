@@ -488,6 +488,8 @@ let startX = 0;
 let startY = 0;
 let isZooming = false;
 let isPanning = false;
+let lastTapTime = 0;
+let tapTimer = null;
 
 function getDistance(t1, t2) {
   const dx = t1.clientX - t2.clientX;
@@ -538,20 +540,51 @@ mainVideo.addEventListener('touchmove', e => {
 }, { passive: false });
 
 mainVideo.addEventListener('touchend', e => {
-  if (e.touches.length < 2) {
-    isZooming = false;
-  }
+  const wasZooming = isZooming;
+  const wasPanning = isPanning;
+
+  if (e.touches.length < 2) isZooming = false;
   if (e.touches.length === 0) {
     isPanning = false;
-    // Snap back if zoom is very close to normal
     if (currentScale < 1.05) {
       currentScale = 1.0;
       panX = 0;
       panY = 0;
       mainVideo.style.transform = '';
     }
+
+    // Handle tap gestures only when no zoom/pan was active
+    if (!wasZooming && !wasPanning && e.changedTouches.length === 1) {
+      e.preventDefault();
+      const touch = e.changedTouches[0];
+      const now = Date.now();
+      const dt = now - lastTapTime;
+
+      if (dt > 30 && dt < 300) {
+        // Double tap
+        clearTimeout(tapTimer);
+        tapTimer = null;
+        lastTapTime = 0;
+        const rect = mainVideo.getBoundingClientRect();
+        if (touch.clientX - rect.left >= rect.width / 2) {
+          mainVideo.currentTime = Math.min(mainVideo.duration || 0, mainVideo.currentTime + 10);
+        } else {
+          mainVideo.currentTime = Math.max(0, mainVideo.currentTime - 10);
+        }
+        showControls();
+      } else {
+        // Single tap — wait to confirm it's not followed by a second tap
+        lastTapTime = now;
+        clearTimeout(tapTimer);
+        tapTimer = setTimeout(() => {
+          tapTimer = null;
+          togglePlay();
+          showControls();
+        }, 250);
+      }
+    }
   }
-});
+}, { passive: false });
 
 // Update bounds on window resize / orientation change
 window.addEventListener('resize', () => {
