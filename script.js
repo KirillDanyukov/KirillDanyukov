@@ -44,7 +44,6 @@ const modal       = document.getElementById('videoModal');
 const playerWrap  = document.querySelector('.player-wrap');
 const modalClose  = document.getElementById('modalClose');
 const mainVideo   = document.getElementById('mainVideo');
-const mainSrc     = document.getElementById('mainVideoSrc');
 
 const playPauseBtn = document.getElementById('playPauseBtn');
 const iconPlay     = playPauseBtn.querySelector('.icon-play');
@@ -76,17 +75,6 @@ let currentVideoSrc  = '';
 let isDragging = false;
 let isSubMenuOpen = false;
 
-const VIDEO_LIBRARY = {
-  'Видео/Видео 1_1080p.webm': 'Видео/Видео 1_1080p.webm',
-  'Видео/Видео 2_1080p.webm': 'Видео/Видео 2_1080p.webm',
-  'Видео/Видео 3_1080p.webm': 'Видео/Видео 3_1080p.webm',
-  'Видео/Видео 4_1080p.webm': 'Видео/Видео 4_1080p.webm',
-  'Видео/Видео 5_1080p.webm': 'Видео/Видео 5_1080p.webm',
-  'Видео/Видео 6_1080p.webm': 'Видео/Видео 6_1080p.webm',
-  'Видео/Видео 7_1080p.webm': 'Видео/Видео 7_1080p.webm',
-  'Видео/Видео 8_1080p.webm': 'Видео/Видео 8_1080p.webm',
-};
-
 let currentDownloadSrc = '';
 
 // ─── OPEN / CLOSE PLAYER ─────────────────────────────────────────────────────
@@ -96,12 +84,9 @@ document.querySelectorAll('.work-card').forEach(card => {
 
 function openPlayer(src) {
   currentVideoSrc = src;
-  const playSrc = VIDEO_LIBRARY[src] || src;
+  currentDownloadSrc = src;
 
-  currentDownloadSrc = playSrc;
-
-  // Set the source elements
-  mainVideo.src = playSrc;
+  mainVideo.src = src;
   
   // Reset pinch-to-zoom properties
   currentScale = 1.0;
@@ -141,7 +126,6 @@ function openPlayer(src) {
 function closePlayer() {
   mainVideo.pause();
   mainVideo.removeAttribute('src');
-  if (mainSrc) mainSrc.removeAttribute('src');
   mainVideo.load(); // Release decoder memory immediately on close to support weak devices
   modal.classList.remove('active');
   document.body.style.overflow = '';
@@ -446,35 +430,6 @@ if ('IntersectionObserver' in window) {
     el.style.transition += ', opacity 0.5s ease, transform 0.5s ease';
     el.style.transform  = (el.style.transform || '') + ' translateY(24px)';
     io.observe(el);
-  });
-}
-
-// ─── LAZY LOAD VIDEOS FOR LOW-END DEVICES ────────────────────────────────────
-if ('IntersectionObserver' in window) {
-  const videoObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const video = entry.target;
-        const source = video.querySelector('source');
-        if (source && source.dataset.src) {
-          source.src = source.dataset.src;
-          video.load();
-        }
-        observer.unobserve(video);
-      }
-    });
-  }, { rootMargin: '100px' });
-
-  document.querySelectorAll('video.lazy-video').forEach(video => {
-    videoObserver.observe(video);
-  });
-} else {
-  document.querySelectorAll('video.lazy-video').forEach(video => {
-    const source = video.querySelector('source');
-    if (source && source.dataset.src) {
-      source.src = source.dataset.src;
-      video.load();
-    }
   });
 }
 

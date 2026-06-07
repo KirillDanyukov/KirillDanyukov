@@ -39,8 +39,6 @@ body {
 .doodle-4 { width: 180px; bottom: 20%; left: 1%; }
 .doodle-5 { width: 90px; bottom: 10%; right: 8%; }
 
-/* notebook lines removed */
-
 /* === SECTIONS === */
 .section {
   position: relative;
@@ -203,8 +201,6 @@ body {
   flex: 0 0 auto;
   align-items: center;
 }
-.exp-photos-single { justify-content: center; }
-
 .sketch-photo-wrap {
   position: relative;
   display: inline-block;
@@ -267,12 +263,11 @@ body {
 }
 .sticker-star-el { top: -12px; right: -10px; }
 .sticker-heart-el { bottom: -10px; left: -10px; }
-.sticker-apple-el { top: -14px; left: -10px; }
-.sticker-hands-el { bottom: -12px; right: -8px; width: 44px; height: 38px; }
+
 .sticker-alt { top: -12px; left: -10px; }
-.sticker-alt2 { top: -12px; right: -10px; width: 44px; height: 38px; }
+
 .sticker-green { bottom: -10px; right: -10px; }
-.sticker-gold-big { top: -16px; right: -12px; width: 48px; height: 48px; }
+
 .award-photo .sketch-photo { width: 340px; height: auto; }
 
 /* === WHO SECTION === */

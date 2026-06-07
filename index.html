@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="page-title">Кирилл Данюков — Сайт-визитка</title>
+  <meta name="description" content="Кирилл Данюков — медиа, КВН, волонтёрство, стартапы">
+  <meta name="theme-color" content="#f5f0e8">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Indie+Flower&family=Inter:wght@400;500&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/caveat-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/indie-flower-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/patrick-hand-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -541,7 +544,6 @@
 
       <div class="player-wrap">
         <video id="mainVideo" preload="none">
-          <source id="mainVideoSrc" src="" type="video/webm">
         </video>
 
         <div class="subtitle-display" id="subtitleDisplay"></div>
@@ -651,7 +653,8 @@
     </div>
   </div>
 
-  <script src="lang.js"></script>
-  <script src="script.js"></script>
+  <script src="lang.js" defer></script>
+  <script src="script.js" defer></script>
+  <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
 </body>
 </html>
