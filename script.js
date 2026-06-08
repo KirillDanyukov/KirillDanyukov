@@ -71,11 +71,9 @@ const fullscreenBtn  = document.getElementById('fullscreenBtn');
 const iconFs         = fullscreenBtn.querySelector('.icon-fs');
 const iconFsExit     = fullscreenBtn.querySelector('.icon-fs-exit');
 
-let currentVideoSrc  = '';
+let currentVideoSrc = '';
 let isDragging = false;
 let isSubMenuOpen = false;
-
-let currentDownloadSrc = '';
 
 // ─── OPEN / CLOSE PLAYER ─────────────────────────────────────────────────────
 document.querySelectorAll('.work-card').forEach(card => {
@@ -84,8 +82,6 @@ document.querySelectorAll('.work-card').forEach(card => {
 
 function openPlayer(src) {
   currentVideoSrc = src;
-  currentDownloadSrc = src;
-
   mainVideo.src = src;
   
   // Reset pinch-to-zoom properties
@@ -280,7 +276,7 @@ speedMenu.querySelectorAll('button').forEach(btn => {
 
 // Download
 downloadBtn.addEventListener('click', () => {
-  const dl = currentDownloadSrc || currentVideoSrc;
+  const dl = currentVideoSrc;
   if (!dl) return;
   const a = document.createElement('a');
   a.href     = dl;
@@ -397,9 +393,6 @@ document.addEventListener('keydown', e => {
   if (e.code === 'ArrowRight') mainVideo.currentTime = Math.min(mainVideo.duration || 0, mainVideo.currentTime + 5);
   if (e.code === 'KeyM')       muteBtn.click();
 });
-
-// ─── VIDEO THUMBNAILS ────────────────────────────────────────────────────────
-// Previews/covers use highly optimized WebP images extracted from videos to load instantly and save bandwidth.
 
 // ─── UTILS ───────────────────────────────────────────────────────────────────
 function fmtTime(secs) {

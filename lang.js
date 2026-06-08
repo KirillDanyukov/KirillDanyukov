@@ -454,16 +454,7 @@ const TRANSLATIONS = {
 
 // ─── LANGUAGE SWITCHER LOGIC ─────────────────────────────────────────────────
 
-// Country code (ISO 3166-1 alpha-2) → site language code
-const COUNTRY_LANG_MAP = {
-  'RU': 'ru', 'BY': 'be', 'UA': 'uk', 'KZ': 'kk',
-  'DE': 'de', 'AT': 'de', 'LI': 'de',
-  'FR': 'fr', 'MC': 'fr',
-  'CN': 'zh', 'HK': 'zh', 'MO': 'zh', 'TW': 'zh',
-  'KR': 'ko', 'JP': 'ja',
-};
-
-let currentLang = 'en';
+let currentLang = 'ru';
 
 function applyLang(lang) {
   const dict = TRANSLATIONS[lang];
@@ -504,35 +495,9 @@ langDropdown.addEventListener('click', e => {
   langDropdown.classList.remove('open');
 });
 
-// ─── GEO-BASED AUTO-DETECTION (first visit only) ─────────────────────────────
-
 function initLang() {
   const saved = localStorage.getItem('lang');
-  if (saved && TRANSLATIONS[saved]) {
-    applyLang(saved);
-    return;
-  }
-
-  // No saved preference: show English immediately, then try geolocation
-  applyLang('en');
-
-  if (!navigator.geolocation) return;
-
-  navigator.geolocation.getCurrentPosition(
-    function(pos) {
-      var lat = pos.coords.latitude;
-      var lon = pos.coords.longitude;
-      fetch('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=' + lat + '&longitude=' + lon + '&localityLanguage=en')
-        .then(function(r) { return r.json(); })
-        .then(function(d) {
-          var lang = COUNTRY_LANG_MAP[d.countryCode] || 'en';
-          applyLang(lang);
-        })
-        .catch(function() { /* keep English, already applied */ });
-    },
-    function() { /* permission denied or error — keep English */ },
-    { timeout: 4000, maximumAge: 86400000 }
-  );
+  applyLang(saved && TRANSLATIONS[saved] ? saved : 'ru');
 }
 
 initLang();
