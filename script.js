@@ -1,23 +1,82 @@
 'use strict';
 
+// ─── DEVICE / NETWORK PERFORMANCE TIER ───────────────────────────────────────
+// Detects slow connections or weak devices and forces smaller image variants.
+// Result cached in localStorage so detection runs once per session.
+(function detectPerfTier() {
+  var TIER_KEY = 'perf_tier';
+  var cached = localStorage.getItem(TIER_KEY);
+  if (cached) { document.documentElement.dataset.tier = cached; applyTier(cached); return; }
+
+  var conn   = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  var memory = navigator.deviceMemory;
+  var cores  = navigator.hardwareConcurrency;
+
+  var tier = 'high';
+  if (conn && (conn.saveData || conn.effectiveType === 'slow-2g' || conn.effectiveType === '2g')) {
+    tier = 'low';
+  } else if (conn && conn.effectiveType === '3g') {
+    tier = 'medium';
+  } else if ((memory != null && memory <= 1) || (cores != null && cores <= 2)) {
+    tier = 'medium';
+  }
+
+  localStorage.setItem(TIER_KEY, tier);
+  document.documentElement.dataset.tier = tier;
+  applyTier(tier);
+
+  function applyTier(t) {
+    if (t === 'low') {
+      document.querySelectorAll('picture source').forEach(function(s) { s.sizes = '480px'; });
+    } else if (t === 'medium') {
+      document.querySelectorAll('picture source').forEach(function(s) {
+        s.sizes = s.sizes.replace(/\d{4,}px/, '768px');
+      });
+    }
+  }
+})();
+
 // ─── PHOTO LIGHTBOX ──────────────────────────────────────────────────────────
 
-const photoModal      = document.getElementById('photoModal');
-const photoModalImg   = document.getElementById('photoModalImg');
-const photoModalClose = document.getElementById('photoModalClose');
+const photoModal        = document.getElementById('photoModal');
+const photoModalImg     = document.getElementById('photoModalImg');
+const photoModalClose   = document.getElementById('photoModalClose');
+const photoModalDownload = document.getElementById('photoModalDownload');
 
-// Hero photo click
-document.getElementById('heroPhotoImg').addEventListener('click', () => {
-  openPhotoLightbox('Фото/Фото 1.webp');
+// Hero photo click — triggered by image or the surrounding white border (card)
+const avatarCharEl = document.getElementById('avatarCharacter');
+const avatarCardEl = document.getElementById('avatarCard');
+function openHeroPhoto() {
+  const src = (avatarCharEl && (avatarCharEl.dataset.orig || avatarCharEl.src)) || 'Фото/Кирилл-Данюков-фото-1.webp';
+  openPhotoLightbox(src, 'character_portrait');
+}
+if (avatarCharEl) avatarCharEl.addEventListener('click', openHeroPhoto);
+if (avatarCardEl) avatarCardEl.addEventListener('click', function(e) {
+  if (e.target !== avatarCharEl) openHeroPhoto();
 });
 
 // Block-2 sketch-photo click
 document.querySelectorAll('.sketch-photo').forEach(img => {
-  img.addEventListener('click', () => openPhotoLightbox(img.src));
+  img.addEventListener('click', () => openPhotoLightbox(
+    img.dataset.orig || img.currentSrc,
+    img.dataset.photoNum
+  ));
 });
 
-function openPhotoLightbox(src) {
+function openPhotoLightbox(src, photoNum) {
   photoModalImg.src = src;
+  if (photoNum) {
+    if (photoNum === 'character_portrait') {
+      photoModalDownload.href = 'Кирилл-Данюков-фото-1.png';
+      photoModalDownload.download = 'Кирилл-Данюков-фото-1.png';
+    } else {
+      photoModalDownload.href = 'Фото/downloads/Фото-' + photoNum + '.png';
+      photoModalDownload.download = 'Кирилл-Данюков-фото-' + photoNum + '.png';
+    }
+    photoModalDownload.style.display = '';
+  } else {
+    photoModalDownload.style.display = 'none';
+  }
   photoModal.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
@@ -637,3 +696,78 @@ function updateSubtitle() {
 function clearSubtitle() {
   if (subtitleDisplay) subtitleDisplay.innerHTML = '';
 }
+
+// ─── 3D INTERACTIVE AVATAR CARD ──────────────────────────────────────────────
+(function init3DAvatar() {
+  const container = document.getElementById('interactiveAvatarContainer');
+  const card = document.getElementById('avatarCard');
+  const character = document.getElementById('avatarCharacter');
+  const shadow = document.getElementById('avatarShadow');
+  const sheen = document.getElementById('avatarSheen');
+  
+  if (!container || !card) return;
+  
+  let rect = card.getBoundingClientRect();
+  window.addEventListener('resize', () => { rect = card.getBoundingClientRect(); });
+  
+  let targetRotX = 0, targetRotY = 0;
+  let currentRotX = 0, currentRotY = 0;
+  
+  // High-performance interpolation loop for smooth movements (60fps)
+  function updateParallax() {
+    currentRotX += (targetRotX - currentRotX) * 0.1;
+    currentRotY += (targetRotY - currentRotY) * 0.1;
+    
+    // Apply 2D rotation to the entire card
+    card.style.transform = `rotate(${currentRotY * 0.3}deg)`;
+
+    // Shift character slightly for 2D parallax feel
+    const charShiftX = currentRotY * 0.8;
+    const charShiftY = -currentRotX * 0.8;
+    character.style.transform = `translate(${charShiftX}px, ${charShiftY}px) scale(1.02)`;
+
+    // Move shadow in the opposite direction
+    const shadowShiftX = -currentRotY * 1.6;
+    const shadowShiftY = currentRotX * 0.6;
+    shadow.style.transform = `translate(${shadowShiftX}px, ${shadowShiftY}px)`;
+    
+    requestAnimationFrame(updateParallax);
+  }
+  
+  requestAnimationFrame(updateParallax);
+  
+  // Track cursor coordinates
+  window.addEventListener('mousemove', (e) => {
+    const cardCenterX = rect.left + rect.width / 2;
+    const cardCenterY = rect.top + rect.height / 2;
+    
+    const normX = (e.clientX - cardCenterX) / (window.innerWidth / 2);
+    const normY = (e.clientY - cardCenterY) / (window.innerHeight / 2);
+    
+    targetRotY = normX * 16;
+    targetRotX = -normY * 12;
+    
+    const sheenX = ((e.clientX - rect.left) / rect.width) * 100;
+    const sheenY = ((e.clientY - rect.top) / rect.height) * 100;
+    sheen.style.background = `radial-gradient(circle at ${sheenX}% ${sheenY}%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 55%)`;
+    sheen.style.opacity = '1';
+  });
+  
+  window.addEventListener('mouseleave', () => {
+    targetRotX = 0;
+    targetRotY = 0;
+    sheen.style.opacity = '0';
+  });
+
+  // Mobile Device Orientation gyroscope support
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', (e) => {
+      if (e.beta !== null && e.gamma !== null) {
+        // Map tilt values: gamma is left/right (-90 to 90), beta is front/back
+        targetRotY = Math.max(-16, Math.min(16, e.gamma * 0.45));
+        targetRotX = Math.max(-12, Math.min(12, (e.beta - 45) * 0.4));
+        sheen.style.opacity = '0.5';
+      }
+    }, true);
+  }
+})();

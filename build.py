@@ -29,6 +29,14 @@ rcssmin = ensure_pkg('rcssmin')
 rjsmin  = ensure_pkg('rjsmin')
 htmlmin = ensure_pkg('htmlmin')
 
+# ── 0. Generate responsive images if not yet done ─────────────────────────
+resp_dir = ROOT / 'Фото' / 'responsive'
+if not resp_dir.exists() or not any(resp_dir.glob('*.webp')):
+    print("Running generate_images.py (first-time image generation)...")
+    os.system(f'python "{ROOT / "generate_images.py"}"')
+else:
+    print("Responsive images: already generated (run generate_images.py --force to redo)")
+
 # --- recreate dist/ ---
 if DIST.exists():
     shutil.rmtree(DIST)
@@ -80,15 +88,30 @@ html_work = re.sub(
     count=1
 )
 
-# Preload hero image so it starts downloading before the DOM is rendered
-hero_preload = '<link rel="preload" href="Фото/Фото 1.webp" as="image" type="image/webp">'
+# Preload hero image: use AVIF if generated, else WebP responsive, else original
+_avif_hero = ROOT / 'Фото' / 'responsive' / 'Фото-1-768.avif'
+_webp_hero  = ROOT / 'Фото' / 'responsive' / 'Фото-1-768.webp'
+if _avif_hero.exists():
+    hero_preload = (
+        '<link rel="preload" href="Фото/responsive/Фото-1-768.avif" as="image" type="image/avif"'
+        ' imagesrcset="Фото/responsive/Фото-1-480.avif 480w,Фото/responsive/Фото-1-768.avif 768w"'
+        ' imagesizes="(max-width:480px) 90vw,540px">'
+    )
+elif _webp_hero.exists():
+    hero_preload = (
+        '<link rel="preload" href="Фото/responsive/Фото-1-768.webp" as="image" type="image/webp"'
+        ' imagesrcset="Фото/responsive/Фото-1-480.webp 480w,Фото/responsive/Фото-1-768.webp 768w"'
+        ' imagesizes="(max-width:480px) 90vw,540px">'
+    )
+else:
+    hero_preload = '<link rel="preload" href="Фото/Фото 1.webp" as="image" type="image/webp">'
 html_work = html_work.replace('</head>', hero_preload + '</head>', 1)
 
 (DIST / 'index.html').write_text(html_work, encoding='utf-8')
 print(f"index.html : {len(html_src.encode())//1024} KB -> {len(html_work.encode())//1024} KB  (critical CSS inlined, async full CSS)")
 
 # ── 3. JS: minify only — no obfuscation (obfuscation adds 33% size overhead) ─
-for js_name in ('script.js', 'lang.js'):
+for js_name in ('script.js', 'lang.js', 'game.js'):
     js_src = (ROOT / js_name).read_text(encoding='utf-8')
     js_min = rjsmin.jsmin(js_src)
     (DIST / js_name).write_text(js_min, encoding='utf-8')
@@ -102,7 +125,8 @@ content_hash = hashlib.md5(b''.join((ROOT / f).read_bytes() for f in main_files)
 cache_ver = f'v_{content_hash}'
 
 sw_src = (ROOT / 'sw.js').read_text(encoding='utf-8')
-sw_min = rjsmin.jsmin(sw_src).replace("'v2'", f"'{cache_ver}'")
+sw_min = rjsmin.jsmin(sw_src)
+sw_min = re.sub(r"CACHE\s*=\s*['\"][^'\"]+['\"]", f"CACHE='{cache_ver}'", sw_min)
 (DIST / 'sw.js').write_text(sw_min, encoding='utf-8')
 print(f"sw.js      : cache {cache_ver}  (auto-versioned by content hash)")
 
@@ -117,7 +141,7 @@ woff_total = sum(f.stat().st_size for f in fonts_dir.glob('*.woff2')) // 1024
 print(f"fonts/     : {len(list(fonts_dir.glob('*.woff2')))} woff2 files ({woff_total} KB)")
 
 # ── 6. Copy assets unchanged ──────────────────────────────────────────────────
-for dir_name in ('Фото', 'Видео', 'Субтитры'):
+for dir_name in ('Фото', 'Видео', 'Субтитры', 'Предметы'):
     src = ROOT / dir_name
     if src.exists():
         shutil.copytree(src, DIST / dir_name)
