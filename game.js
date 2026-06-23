@@ -675,13 +675,18 @@
   let clouds = [{ x: 60, y: 40 }, { x: 220, y: 80 }, { x: 350, y: 30 }];
 
   const SPEED_TIERS = [
-    { score:   0, speed:  5.0, interval: 55 },
-    { score:  15, speed:  6.5, interval: 47 },
-    { score:  35, speed:  8.0, interval: 40 },
-    { score:  60, speed: 10.0, interval: 33 },
-    { score:  90, speed: 13.0, interval: 27 },
-    { score: 130, speed: 16.0, interval: 21 },
-    { score: 170, speed: 20.0, interval: 17 }
+    { score:   0, speed:  3.2, interval: 75 },
+    { score:  20, speed:  3.9, interval: 68 },
+    { score:  40, speed:  4.7, interval: 61 },
+    { score:  60, speed:  5.6, interval: 54 },
+    { score:  80, speed:  6.6, interval: 48 },
+    { score: 100, speed:  7.7, interval: 43 },
+    { score: 120, speed:  9.0, interval: 38 },
+    { score: 140, speed: 10.4, interval: 33 },
+    { score: 160, speed: 12.0, interval: 29 },
+    { score: 180, speed: 13.8, interval: 25 },
+    { score: 200, speed: 15.8, interval: 22 },
+    { score: 220, speed: 18.0, interval: 19 }
   ];
 
   function getTier(sc) {
@@ -697,8 +702,10 @@
     const imgIndex = Math.floor(Math.random() * ITEM_IMAGES.length);
     const img = ITEM_IMAGES[imgIndex];
     
-    const targetW = 55;
-    const targetH = 55;
+    const ITEM_SIZE = 55;
+    const scale = Math.min(ITEM_SIZE / img.naturalWidth, ITEM_SIZE / img.naturalHeight);
+    const targetW = Math.round(img.naturalWidth * scale);
+    const targetH = Math.round(img.naturalHeight * scale);
     const x = Math.random() * (W - targetW - 40) + 20;
     
     items.push({
@@ -826,8 +833,8 @@
     bursts = [];
     frame = 0;
     spawnTimer = 0;
-    spawnInterval = 55;
-    itemSpeed = 5.0;
+    spawnInterval = 75;
+    itemSpeed = 3.2;
     keys = {};
     movingLeft = false;
     isMoving = false;
