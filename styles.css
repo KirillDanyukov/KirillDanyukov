@@ -2071,7 +2071,8 @@ html[dir="rtl"] .exp-list li::before {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
+  object-position: center center !important;
   border-radius: 0 !important;
   cursor: zoom-in !important;
   position: absolute !important;
