@@ -1,39 +1,21 @@
 'use strict';
 
-const CACHE = 'v8';
+const CACHE = 'v2';
 
 const PRECACHE = [
   '/',
   '/index.html',
   '/styles.css',
-  '/game.js',
-  '/влево.webp',
-  '/вправо.webp',
-  '/lang.js',
   '/script.js',
+  '/lang.js',
+  '/game.js',
   '/fonts/fonts.css',
-  '/fonts/caveat-cyrillic.woff2',
   '/fonts/caveat-cyrillic-ext.woff2',
-  '/fonts/caveat-latin.woff2',
+  '/fonts/caveat-cyrillic.woff2',
   '/fonts/caveat-latin-ext.woff2',
-  '/fonts/indie-flower-400.woff2',
-  '/fonts/patrick-hand-400.woff2',
+  '/fonts/caveat-latin.woff2',
   '/favicon.svg',
   '/favicon.ico',
-  // Hero image — responsive variants (prioritised for fast first paint)
-  '/Фото/responsive/Фото-1-480.webp',
-  '/Фото/responsive/Фото-1-768.webp',
-  // Video thumbnails (original, small files)
-  '/Видео/Обложка 1.webp',
-  '/Видео/Обложка 2.webp',
-  '/Видео/Обложка 3.webp',
-  '/Видео/Обложка 4.webp',
-  '/Видео/Обложка 5.webp',
-  '/Видео/Обложка 6.webp',
-  '/Видео/Обложка 7.webp',
-  '/Видео/Обложка 8.webp',
-  // Original photos kept as fallback for lightbox display
-  '/Фото/Фото 1.webp',
 ];
 
 self.addEventListener('install', e => {
@@ -51,50 +33,39 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-  const url = e.request.url;
+  const url = new URL(e.request.url);
 
-  // Never intercept video files — too large to cache
-  if (url.includes('/Видео/Видео') && url.endsWith('.webm')) return;
+  if (e.request.method !== 'GET') return;
 
-  // Bypass cache on localhost for easier development updates
-  const isLocal = self.location.hostname === 'localhost' || self.location.hostname === '127.0.0.1';
-  if (isLocal) {
+  if (url.pathname.includes('/Видео/Видео') && url.pathname.endsWith('.webm')) return;
+
+  const isNavigation = e.request.mode === 'navigate' || e.request.destination === 'document' || url.pathname === '/' || url.pathname.endsWith('.html');
+  if (isNavigation) {
     e.respondWith(
-      fetch(e.request)
-        .then(res => {
-          if (!res || res.status !== 200 || res.type === 'opaque') return res;
-          const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(e.request, clone));
-          return res;
-        })
-        .catch(() => caches.match(e.request))
+      caches.match(e.request, { ignoreSearch: true }).then(cached => {
+        const networkFetch = fetch(e.request)
+          .then(res => {
+            if (res && res.status === 200) {
+              const clone = res.clone();
+              caches.open(CACHE).then(cache => cache.put(e.request, clone));
+            }
+            return res;
+          })
+          .catch(() => cached);
+
+        return cached || networkFetch;
+      })
     );
     return;
   }
 
-  // Network-first for HTML (get updates)
-  if (e.request.mode === 'navigate' || url.endsWith('.html')) {
-    e.respondWith(
-      fetch(e.request)
-        .then(res => {
-          const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(e.request, clone));
-          return res;
-        })
-        .catch(() => caches.match(e.request))
-    );
-    return;
-  }
-
-  // Cache-first for everything else (fonts, images, CSS, JS, subtitles)
-  // Responsive image variants and PNG downloads are cached on first access.
   e.respondWith(
-    caches.match(e.request).then(cached => {
+    caches.match(e.request, { ignoreSearch: true }).then(cached => {
       if (cached) return cached;
       return fetch(e.request).then(res => {
         if (!res || res.status !== 200 || res.type === 'opaque') return res;
         const clone = res.clone();
-        caches.open(CACHE).then(c => c.put(e.request, clone));
+        caches.open(CACHE).then(cache => cache.put(e.request, clone));
         return res;
       });
     })

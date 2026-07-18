@@ -221,7 +221,14 @@ body {
 .sketch-photo-wrap:nth-child(even):hover .sketch-photo { transform: rotate(2deg) scale(1.04); }
 
 /* === SKETCH PHOTO CLICK CURSOR === */
-.sketch-photo { cursor: zoom-in; }
+.sketch-photo-wrap,
+.who-photo-wrap {
+  cursor: zoom-in;
+}
+.sketch-photo-wrap .sketch-photo,
+.who-photo-wrap img {
+  cursor: zoom-in;
+}
 
 /* === ТЫКНИ HINT === */
 .tykni-wrap {
@@ -1553,10 +1560,7 @@ body {
 
 .game-modal-inner {
   position: relative;
-  width: 480px;
-  height: 640px;
-  max-width: 90vw;
-  max-height: 90vh;
+  width: min(480px, 90vw, calc(90vh * 3 / 4));
   aspect-ratio: 3 / 4;
   border: 4px solid var(--accent);
   border-radius: 16px;

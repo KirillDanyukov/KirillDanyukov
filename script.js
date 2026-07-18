@@ -48,27 +48,47 @@ const avatarCharEl = document.getElementById('avatarCharacter');
 const avatarCardEl = document.getElementById('avatarCard');
 function openHeroPhoto() {
   const src = (avatarCharEl && (avatarCharEl.dataset.orig || avatarCharEl.src)) || 'Фото/Кирилл-Данюков-фото-1.webp';
-  openPhotoLightbox(src, 'character_portrait');
+  const previewSrc = (avatarCharEl && (avatarCharEl.currentSrc || avatarCharEl.src)) || src;
+  openPhotoLightbox(src, 'character_portrait', previewSrc);
 }
 if (avatarCharEl) avatarCharEl.addEventListener('click', openHeroPhoto);
 if (avatarCardEl) avatarCardEl.addEventListener('click', function(e) {
   if (e.target !== avatarCharEl) openHeroPhoto();
 });
 
-// Block-2 sketch-photo click
-document.querySelectorAll('.sketch-photo').forEach(img => {
-  img.addEventListener('click', () => openPhotoLightbox(
-    img.dataset.orig || img.currentSrc,
-    img.dataset.photoNum
-  ));
+// Click handlers for both sketch-photo-wrap and who-photo-wrap (covers full photo areas)
+document.querySelectorAll('.sketch-photo-wrap, .who-photo-wrap').forEach(wrap => {
+  wrap.addEventListener('click', (e) => {
+    e.preventDefault();
+    const img = wrap.querySelector('img');
+    if (img) {
+      openPhotoLightbox(
+        img.dataset.orig || img.currentSrc || img.src,
+        img.dataset.photoNum,
+        img.currentSrc || img.src
+      );
+    }
+  });
 });
 
-function openPhotoLightbox(src, photoNum) {
-  photoModalImg.src = src;
+function openPhotoLightbox(src, photoNum, previewSrc) {
+  const previewUrl = previewSrc || src;
+  const tier = document.documentElement.dataset.tier || 'high';
+
+  // Instantly show already loaded preview to make opening 0ms
+  if (previewUrl) {
+    photoModalImg.src = previewUrl;
+  } else {
+    photoModalImg.src = src;
+  }
+
   if (photoNum) {
     if (photoNum === 'character_portrait') {
-      photoModalDownload.href = 'Кирилл-Данюков-фото-1.png';
+      photoModalDownload.href = 'Фото/downloads/Фото-1.png';
       photoModalDownload.download = 'Кирилл-Данюков-фото-1.png';
+    } else if (photoNum === '30' || photoNum === '31') {
+      photoModalDownload.href = src;
+      photoModalDownload.download = 'ФОТО ' + photoNum + '.png';
     } else {
       photoModalDownload.href = 'Фото/downloads/Фото-' + photoNum + '.png';
       photoModalDownload.download = 'Кирилл-Данюков-фото-' + photoNum + '.png';
@@ -77,9 +97,73 @@ function openPhotoLightbox(src, photoNum) {
   } else {
     photoModalDownload.style.display = 'none';
   }
+
   photoModal.classList.add('active');
   document.body.style.overflow = 'hidden';
+
+  // Load high-res original in the background only when the connection is good enough.
+  if (previewUrl && src && previewUrl !== src && tier !== 'low' && tier !== 'medium') {
+    const hiResImg = new Image();
+    hiResImg.decoding = 'async';
+    hiResImg.onload = () => {
+      // Swap to sharp image only if modal is still open displaying this photo
+      if (photoModal.classList.contains('active') && photoModalImg.src === previewUrl) {
+        photoModalImg.src = src;
+      }
+    };
+    hiResImg.src = src;
+  }
 }
+
+function queueHighResPrefetch(sources) {
+  if (!sources || !sources.length) return;
+
+  const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  const isSlowConnection = !!(conn && (conn.saveData || /slow-2g|2g|3g/.test(conn.effectiveType || '')));
+  if (isSlowConnection) return;
+
+  const schedule = window.requestIdleCallback || function(callback) {
+    return window.setTimeout(() => callback({ didTimeout: false, timeRemaining: () => 50 }), 1500);
+  };
+
+  schedule(() => {
+    sources.slice(0, 4).forEach((src, index) => {
+      window.setTimeout(() => {
+        const img = new Image();
+        img.decoding = 'async';
+        img.src = src;
+      }, 400 + index * 220);
+    });
+  });
+}
+
+function prefetchOriginalPhotos() {
+  const tier = document.documentElement.dataset.tier || 'high';
+  if (tier === 'low' || tier === 'medium') return;
+
+  const sources = [];
+  const seen = new Set();
+
+  if (avatarCharEl && avatarCharEl.dataset.orig) {
+    const heroOrig = avatarCharEl.dataset.orig;
+    if (!seen.has(heroOrig)) {
+      seen.add(heroOrig);
+      sources.push(heroOrig);
+    }
+  }
+
+  document.querySelectorAll('.sketch-photo-wrap img, .who-photo-wrap img').forEach(img => {
+    const src = img.dataset.orig;
+    if (!src || seen.has(src)) return;
+    seen.add(src);
+    sources.push(src);
+  });
+
+  queueHighResPrefetch(sources.slice(0, 4));
+}
+
+window.addEventListener('load', prefetchOriginalPhotos);
+window.addEventListener('pageshow', prefetchOriginalPhotos);
 
 photoModalClose.addEventListener('click', closePhotoModal);
 photoModal.addEventListener('click', e => {
@@ -771,3 +855,24 @@ function clearSubtitle() {
     }, true);
   }
 })();
+
+// Background prefetching for high-res photos to make lightbox clicks instant
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const origImages = Array.from(document.querySelectorAll('img[data-orig]'))
+      .map(img => img.dataset.orig)
+      .filter(Boolean);
+    
+    // Stagger prefetch links to avoid hogging bandwidth on slow connections
+    let delay = 300;
+    origImages.forEach(src => {
+      setTimeout(() => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = src;
+        document.head.appendChild(link);
+      }, delay);
+      delay += 250;
+    });
+  }, 1500);
+});
