@@ -87,19 +87,20 @@ body {
 .sketch-frame {
   border: 3px solid var(--sketch-border);
   border-radius: 4px;
-  padding: 10px;
+  padding: 0;
   background: white;
   box-shadow: 3px 4px 0 var(--sketch-border), 6px 7px 0 rgba(184,160,128,0.2);
   transform: rotate(-2deg);
   transition: transform 0.3s ease;
+  overflow: hidden;
 }
 .sketch-frame:hover { transform: rotate(0deg); }
 .sketch-frame img {
   display: block;
   width: 420px;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 2px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
   cursor: pointer;
 }
 .pencil-underline { display: block; margin-top: 10px; width: 280px; }
@@ -1110,7 +1111,7 @@ body {
   /* Hero */
   .hero-section { min-height: auto; padding: 60px 20px 50px; }
   .hero-content { flex-direction: column; gap: 28px; text-align: center; }
-  .sketch-frame img { width: 300px; height: 350px; }
+  .sketch-frame img { width: 300px; height: auto; }
   .name-underline { margin: 0 auto; }
   .pencil-underline { margin: 0 auto; width: 200px; } /* Center the underline under larger photo on tablet */
   .scroll-hint { justify-content: center; }
@@ -1174,7 +1175,7 @@ body {
   /* Hero */
   .hero-section { padding: 50px 14px 40px; }
   .sketch-frame { transform: none !important; }
-  .sketch-frame img { width: 250px; height: 295px; }
+  .sketch-frame img { width: 250px; height: auto; }
   .hero-name { font-size: 2.4rem; }
   .hero-desc { font-size: 1.6rem; }
   .hero-since { font-size: 1.35rem; }
@@ -1218,7 +1219,7 @@ body {
    RESPONSIVE — SMALL MOBILE  (<380px)
    ================================================================ */
 @media (max-width: 379px) {
-  .sketch-frame img { width: 210px; height: 250px; }
+  .sketch-frame img { width: 210px; height: auto; }
   .who-grid { max-width: 100%; }
   .hero-name { font-size: 2rem; }
 }
@@ -2046,13 +2047,13 @@ html[dir="rtl"] .exp-list li::before {
 
 .avatar-card {
   width: 420px;
-  height: 500px;
+  height: auto;
+  aspect-ratio: 420 / 500;
   position: relative;
   border-radius: 2px;
   overflow: hidden;
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   background: white;
-  border: 10px solid white;
   box-shadow: 2px 3px 0 var(--sketch-border), 5px 6px 0 rgba(184,160,128,0.15);
 }
 
@@ -2120,7 +2121,8 @@ html[dir="rtl"] .exp-list li::before {
 @media (max-width: 899px) {
   .avatar-card {
     width: 300px;
-    height: 350px;
+    height: auto;
+    aspect-ratio: 420 / 500;
     margin: 0 auto;
   }
 }
@@ -2128,14 +2130,16 @@ html[dir="rtl"] .exp-list li::before {
 @media (max-width: 599px) {
   .avatar-card {
     width: 250px;
-    height: 295px;
+    height: auto;
+    aspect-ratio: 420 / 500;
   }
 }
 
 @media (max-width: 379px) {
   .avatar-card {
     width: 210px;
-    height: 250px;
+    height: auto;
+    aspect-ratio: 420 / 500;
   }
 }
 
