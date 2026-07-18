@@ -2030,116 +2030,40 @@ html[dir="rtl"] .exp-list li::before {
   right: 0;
 }
 
-/* ================================================================
-   INTERACTIVE 3D AVATAR CARD
-   ================================================================ */
-.interactive-avatar-frame {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
+/* === STATIC AVATAR PHOTO === */
+#avatarFrame {
   transform: none !important;
-  cursor: zoom-in;
-  overflow: visible !important;
-  position: relative;
-  touch-action: pan-y;
+  transition: none !important;
+  cursor: default;
+}
+#avatarFrame:hover {
+  transform: none !important;
 }
 
-.avatar-card {
+.avatar-static {
+  display: block;
   width: 420px;
   height: auto;
   aspect-ratio: 1 / 1;
-  position: relative;
-  border-radius: 2px;
-  overflow: hidden;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-  background: white;
-  box-shadow: 2px 3px 0 var(--sketch-border), 5px 6px 0 rgba(184,160,128,0.15);
+  object-fit: cover;
+  border-radius: 0;
+  cursor: zoom-in;
 }
 
-/* Ambient background glow inside the card */
-.avatar-bg {
-  position: absolute;
-  inset: 0;
-  border-radius: 2px;
-  background: none;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Specific override to prevent generic .sketch-frame img rules from distorting our avatar image */
-.interactive-avatar-frame img.avatar-character {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
-  object-position: center center !important;
-  border-radius: 0 !important;
-  cursor: zoom-in !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  bottom: auto !important;
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
-  z-index: 3 !important;
-  pointer-events: auto !important;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-/* Dynamic character shadow projected onto back panel */
-.avatar-shadow {
-  position: absolute;
-  bottom: -4px;
-  left: 8%;
-  width: 84%;
-  height: 96%;
-  background: url("Фото/Кирилл-Данюков-фото-1.webp") no-repeat bottom center;
-  background-size: contain;
-  filter: brightness(0) opacity(0.14) blur(10px);
-  z-index: 2;
-  pointer-events: none;
-  transform: translate(0, 0);
-  transform-origin: bottom center;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-/* Sheen layer gloss effect */
-.avatar-sheen {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  pointer-events: none;
-  border-radius: 2px;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 60%);
-  mix-blend-mode: overlay;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-/* Responsive Styles overrides */
 @media (max-width: 899px) {
-  .avatar-card {
+  .avatar-static {
     width: 300px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    margin: 0 auto;
   }
 }
 
 @media (max-width: 599px) {
-  .avatar-card {
+  .avatar-static {
     width: 250px;
-    height: auto;
-    aspect-ratio: 1 / 1;
   }
 }
 
 @media (max-width: 379px) {
-  .avatar-card {
+  .avatar-static {
     width: 210px;
-    height: auto;
-    aspect-ratio: 1 / 1;
   }
 }
-

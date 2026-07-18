@@ -43,18 +43,14 @@ const photoModalImg     = document.getElementById('photoModalImg');
 const photoModalClose   = document.getElementById('photoModalClose');
 const photoModalDownload = document.getElementById('photoModalDownload');
 
-// Hero photo click — triggered by image or the surrounding white border (card)
+// Hero photo click — triggered by image
 const avatarCharEl = document.getElementById('avatarCharacter');
-const avatarCardEl = document.getElementById('avatarCard');
 function openHeroPhoto() {
   const src = (avatarCharEl && (avatarCharEl.dataset.orig || avatarCharEl.src)) || 'Фото/Кирилл-Данюков-фото-1.webp';
   const previewSrc = (avatarCharEl && (avatarCharEl.currentSrc || avatarCharEl.src)) || src;
   openPhotoLightbox(src, 'character_portrait', previewSrc);
 }
 if (avatarCharEl) avatarCharEl.addEventListener('click', openHeroPhoto);
-if (avatarCardEl) avatarCardEl.addEventListener('click', function(e) {
-  if (e.target !== avatarCharEl) openHeroPhoto();
-});
 
 // Click handlers for both sketch-photo-wrap and who-photo-wrap (covers full photo areas)
 document.querySelectorAll('.sketch-photo-wrap, .who-photo-wrap').forEach(wrap => {
@@ -781,80 +777,7 @@ function clearSubtitle() {
   if (subtitleDisplay) subtitleDisplay.innerHTML = '';
 }
 
-// ─── 3D INTERACTIVE AVATAR CARD ──────────────────────────────────────────────
-(function init3DAvatar() {
-  const container = document.getElementById('interactiveAvatarContainer');
-  const card = document.getElementById('avatarCard');
-  const character = document.getElementById('avatarCharacter');
-  const shadow = document.getElementById('avatarShadow');
-  const sheen = document.getElementById('avatarSheen');
-  
-  if (!container || !card) return;
-  
-  let rect = card.getBoundingClientRect();
-  window.addEventListener('resize', () => { rect = card.getBoundingClientRect(); });
-  
-  let targetRotX = 0, targetRotY = 0;
-  let currentRotX = 0, currentRotY = 0;
-  
-  // High-performance interpolation loop for smooth movements (60fps)
-  function updateParallax() {
-    currentRotX += (targetRotX - currentRotX) * 0.1;
-    currentRotY += (targetRotY - currentRotY) * 0.1;
-    
-    // Apply 2D rotation to the entire card
-    card.style.transform = `rotate(${currentRotY * 0.3}deg)`;
 
-    // Shift character slightly for 2D parallax feel
-    const charShiftX = currentRotY * 0.8;
-    const charShiftY = -currentRotX * 0.8;
-    character.style.transform = `translate(${charShiftX}px, ${charShiftY}px) scale(1.02)`;
-
-    // Move shadow in the opposite direction
-    const shadowShiftX = -currentRotY * 1.6;
-    const shadowShiftY = currentRotX * 0.6;
-    shadow.style.transform = `translate(${shadowShiftX}px, ${shadowShiftY}px)`;
-    
-    requestAnimationFrame(updateParallax);
-  }
-  
-  requestAnimationFrame(updateParallax);
-  
-  // Track cursor coordinates
-  window.addEventListener('mousemove', (e) => {
-    const cardCenterX = rect.left + rect.width / 2;
-    const cardCenterY = rect.top + rect.height / 2;
-    
-    const normX = (e.clientX - cardCenterX) / (window.innerWidth / 2);
-    const normY = (e.clientY - cardCenterY) / (window.innerHeight / 2);
-    
-    targetRotY = normX * 16;
-    targetRotX = -normY * 12;
-    
-    const sheenX = ((e.clientX - rect.left) / rect.width) * 100;
-    const sheenY = ((e.clientY - rect.top) / rect.height) * 100;
-    sheen.style.background = `radial-gradient(circle at ${sheenX}% ${sheenY}%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 55%)`;
-    sheen.style.opacity = '1';
-  });
-  
-  window.addEventListener('mouseleave', () => {
-    targetRotX = 0;
-    targetRotY = 0;
-    sheen.style.opacity = '0';
-  });
-
-  // Mobile Device Orientation gyroscope support
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener('deviceorientation', (e) => {
-      if (e.beta !== null && e.gamma !== null) {
-        // Map tilt values: gamma is left/right (-90 to 90), beta is front/back
-        targetRotY = Math.max(-16, Math.min(16, e.gamma * 0.45));
-        targetRotX = Math.max(-12, Math.min(12, (e.beta - 45) * 0.4));
-        sheen.style.opacity = '0.5';
-      }
-    }, true);
-  }
-})();
 
 // Background prefetching for high-res photos to make lightbox clicks instant
 window.addEventListener('load', () => {
