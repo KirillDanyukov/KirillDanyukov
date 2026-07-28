@@ -2,9 +2,10 @@
 
 const TRANSLATIONS = {
   ru: {
-    'page-title':      'Кирилл Данюков — Сайт-визитка',
+    'page-title':      'Кирилл Данюков — активист студсовета МичГАУ',
+    'page-description':'Кирилл Данюков — активист студсовета МичГАУ (Мичуринский ГАУ), студент Центра-колледжа прикладных квалификаций. КВН, медиа, волонтёрство, блогинг.',
     'hero-name':       'Кирилл Данюков',
-    'hero-desc':       'Творческий деятель, КВНщик, блогер, автор медиапроектов и участник общественных инициатив.',
+    'hero-desc':       'Творческий деятель, активист студсовета МичГАУ, студент Центра-колледжа прикладных квалификаций. КВН, блогер, автор медиапроектов.',
     'hero-since':      'С 2023 года развиваюсь в сфере медиа, видеопроизводства, блогинга и творческих проектов.',
     'scroll-hint':     'листай ниже',
     'section-experience': 'Опыт и достижения',
@@ -27,6 +28,11 @@ const TRANSLATIONS = {
     'awards-title':    'Награды',
     'award-1':         'Благодарственное письмо за помощь в организации и проведении Дебюта Первокурсника 2025',
     'award-2':         'Студент года 2025 победитель номинации Творческая личность',
+    'education-title': 'Образование и студсовет',
+    'education-desc':  'Студент 2 курса Центра-колледжа прикладных квалификаций (Мичуринский ГАУ / МичГАУ). Заместитель руководителя комитета по общежитиям Студенческого совета. Победитель номинации «Студент года 2025».',
+    'education-item-1':'Студент 2 курса Центра-колледжа прикладных квалификаций МичГАУ',
+    'education-item-2':'Заместитель руководителя комитета по общежитиям Студенческого совета',
+    'education-item-3':'Победитель номинации «Студент года 2025» — Творческая личность',
     'who-title':       'Кто я?',
     'blogger-title':   'Блогер',
     'blogger-desc':    'Создаю медиаконтент, работаю с аудиторией, веду блог.',
@@ -50,6 +56,7 @@ const TRANSLATIONS = {
 
   en: {
     'page-title':      'Kirill Danyukov — Portfolio',
+    'page-description':'Kirill Danyukov — activist of the Student Council of MichGAU (Michurinsk State Agrarian University), student at the Center-College of Applied Qualifications. KVN, media, volunteering, blogging.',
     'hero-name':       'Kirill Danyukov',
     'hero-desc':       'Creative personality, KVN performer, blogger, author of media projects and participant in public initiatives.',
     'hero-since':      'Since 2023 I have been developing in the fields of media, video production, blogging and creative projects.',
@@ -74,6 +81,11 @@ const TRANSLATIONS = {
     'awards-title':    'Awards',
     'award-1':         'Letter of appreciation for helping organize the First-Year Student Debut 2025',
     'award-2':         'Student of the Year 2025, winner of the Creative Personality nomination',
+    'education-title': 'Education & Student Council',
+    'education-desc':  '2nd year student at the Center-College of Applied Qualifications (Michurinsk State Agrarian University / MichGAU). Deputy Head of the Dormitory Committee of the Student Council. Winner of the «Student of the Year 2025» nomination.',
+    'education-item-1':'2nd year student at the Center-College of Applied Qualifications of MichGAU',
+    'education-item-2':'Deputy Head of the Dormitory Committee of the Student Council',
+    'education-item-3':'Winner of «Student of the Year 2025» — Creative Personality nomination',
     'who-title':       'Who am I?',
     'blogger-title':   'Blogger',
     'blogger-desc':    'I create media content, work with audiences, and run a blog.',
@@ -97,6 +109,7 @@ const TRANSLATIONS = {
 
   be: {
     'page-title':      'Кірыл Данюкоў — Сайт-візітка',
+    'page-description':'Кірыл Данюкоў — актывіст студсавета МічДАУ (Мічурынскі ДАУ), студэнт Цэнтра-каледжа прыкладных кваліфікацый. КВН, медыя, валанцёрства, блогінг.',
     'hero-name':       'Кирилл Данюков',
     'hero-desc':       'Творчы дзеяч, кавэншчык, блогер, аўтар медыяпраектаў і ўдзельнік грамадскіх ініцыятыў.',
     'hero-since':      'З 2023 года развіваюся ў сферы медыя, відэавытворчасці, блогінгу і творчых праектаў.',
@@ -121,6 +134,11 @@ const TRANSLATIONS = {
     'awards-title':    'Узнагароды',
     'award-1':         'Падзячны ліст за дапамогу ў арганізацыі і правядзенні Дэбюту Першакурсніка 2025',
     'award-2':         'Студэнт года 2025 пераможца намінацыі Творчая асоба',
+    'education-title': 'Адукацыя і студсавет',
+    'education-desc':  'Студэнт 2 курса Цэнтра-каледжа прыкладных кваліфікацый (Мічурынскі ДАУ / МічДАУ). Намеснік кіраўніка камітэта па інтэрнатах Студэнцкага савета. Пераможца намінацыі «Студэнт года 2025».',
+    'education-item-1':'Студэнт 2 курса Цэнтра-каледжа прыкладных кваліфікацый МічДАУ',
+    'education-item-2':'Намеснік кіраўніка камітэта па інтэрнатах Студэнцкага савета',
+    'education-item-3':'Пераможца намінацыі «Студэнт года 2025» — Творчая асоба',
     'who-title':       'Хто я?',
     'blogger-title':   'Блогер',
     'blogger-desc':    'Ствараю медыякантэнт, працую з аўдыторыяй, вяду блог.',
@@ -144,6 +162,7 @@ const TRANSLATIONS = {
 
   uk: {
     'page-title':      'Кирило Данюков — Сайт-візитка',
+    'page-description':'Кирило Данюков — активіст студради МічДАУ (Мічурінський ДАУ), студент Центру-коледжу прикладних кваліфікацій. КВН, медіа, волонтерство, блогінг.',
     'hero-name':       'Кирилл Данюков',
     'hero-desc':       'Творча особистість, кавеенщик, блогер, автор медіапроєктів та учасник громадських ініціатив.',
     'hero-since':      'З 2023 року розвиваюся у сфері медіа, відеовиробництва, блогінгу та творчих проєктів.',
@@ -168,6 +187,11 @@ const TRANSLATIONS = {
     'awards-title':    'Нагороди',
     'award-1':         'Подячний лист за допомогу в організації та проведенні Дебюту Першокурсника 2025',
     'award-2':         'Студент року 2025 переможець номінації Творча особистість',
+    'education-title': 'Освіта та студрада',
+    'education-desc':  'Студент 2 курсу Центру-коледжу прикладних кваліфікацій (Мічурінський ДАУ / МічДАУ). Заступник керівника комітету по гуртожитках Студентської ради. Переможець номінації «Студент року 2025».',
+    'education-item-1':'Студент 2 курсу Центру-коледжу прикладних кваліфікацій МічДАУ',
+    'education-item-2':'Заступник керівника комітету по гуртожитках Студентської ради',
+    'education-item-3':'Переможець номінації «Студент року 2025» — Творча особистість',
     'who-title':       'Хто я?',
     'blogger-title':   'Блогер',
     'blogger-desc':    'Створюю медіаконтент, працюю з аудиторією, веду блог.',
@@ -191,6 +215,7 @@ const TRANSLATIONS = {
 
   kk: {
     'page-title':      'Кирилл Данюков — Портфолио',
+    'page-description':'Кирилл Данюков — МичМАУ (Мичуринск МАУ) студенттік кеңесінің белсендісі, Қолданбалы біліктіліктер колледж-орталығының студенті. КВН, медиа, волонтерлік, блогинг.',
     'hero-name':       'Кирилл Данюков',
     'hero-desc':       'Шығармашылық тұлға, КВН ойыншысы, блогер, медиа жобалардың авторы және қоғамдық бастамалардың қатысушысы.',
     'hero-since':      '2023 жылдан бастап медиа, бейнеөндіріс, блогинг және шығармашылық жобалар саласында дамып келемін.',
@@ -215,6 +240,11 @@ const TRANSLATIONS = {
     'awards-title':    'Марапаттар',
     'award-1':         '2025 жылғы бірінші курс студенттерінің дебютін ұйымдастыруға көмегі үшін алғыс хат',
     'award-2':         '2025 жылғы Жыл Студенті, Шығармашылық тұлға номинациясының жеңімпазы',
+    'education-title': 'Білім және студенттік кеңес',
+    'education-desc':  'Қолданбалы біліктіліктер колледж-орталығының 2 курс студенті (Мичуринск МАУ / МичМАУ). Студенттік кеңес жатақхана комитеті басшысының орынбасары. «2025 жылғы Студент» номинациясының жеңімпазы.',
+    'education-item-1':'МичМАУ Қолданбалы біліктіліктер колледж-орталығының 2 курс студенті',
+    'education-item-2':'Студенттік кеңес жатақхана комитеті басшысының орынбасары',
+    'education-item-3':'«2025 жылғы Студент» — Шығармашылық тұлға номинациясының жеңімпазы',
     'who-title':       'Мен кіммін?',
     'blogger-title':   'Блогер',
     'blogger-desc':    'Медиа контент жасаймын, аудиториямен жұмыс жасаймын, блог жүргіземін.',
@@ -238,6 +268,7 @@ const TRANSLATIONS = {
 
   de: {
     'page-title':      'Kirill Danjukow — Portfolio',
+    'page-description':'Kirill Danjukow — Aktivist des Studentenrats der MichGAU (Staatliche Agraruniversität Mitschurinsk), Student des Zentrum-Kollegs für angewandte Qualifikationen. KVN, Medien, Ehrenamt, Blogging.',
     'hero-name':       'Kirill Danyukov',
     'hero-desc':       'Kreative Persönlichkeit, KVN-Teilnehmer, Blogger, Autor von Medienprojekten und Teilnehmer an öffentlichen Initiativen.',
     'hero-since':      'Seit 2023 entwickle ich mich in den Bereichen Medien, Videoproduktion, Bloggen und kreative Projekte.',
@@ -262,6 +293,11 @@ const TRANSLATIONS = {
     'awards-title':    'Auszeichnungen',
     'award-1':         'Dankesschreiben für die Hilfe bei der Organisation des Erstsemester-Debüts 2025',
     'award-2':         'Student des Jahres 2025, Gewinner der Nominierung Kreative Persönlichkeit',
+    'education-title': 'Bildung & Studentenrat',
+    'education-desc':  'Student im 2. Jahr am Zentrum-Kolleg für angewandte Qualifikationen (Staatliche Agraruniversität Mitschurinsk / MichGAU). Stellvertretender Vorsitzender des Wohnheim-Ausschusses des Studentenrates. Gewinner der Nominierung «Student des Jahres 2025».',
+    'education-item-1':'Student im 2. Jahr am Zentrum-Kolleg für angewandte Qualifikationen der MichGAU',
+    'education-item-2':'Stellvertretender Vorsitzender des Wohnheim-Ausschusses des Studentenrates',
+    'education-item-3':'Gewinner der Nominierung «Student des Jahres 2025» — Kreative Persönlichkeit',
     'who-title':       'Wer bin ich?',
     'blogger-title':   'Blogger',
     'blogger-desc':    'Ich erstelle Medieninhalte, arbeite mit dem Publikum und führe einen Blog.',
@@ -285,6 +321,7 @@ const TRANSLATIONS = {
 
   fr: {
     'page-title':      'Kirill Danioukov — Portfolio',
+    'page-description':'Kirill Danioukov — activiste du conseil étudiant de MichGAU (Université agraire d\'État de Mitchourinsk), étudiant au Centre-Collège des qualifications appliquées. KVN, médias, bénévolat, blogging.',
     'hero-name':       'Kirill Danyukov',
     'hero-desc':       'Personnalité créative, participant au KVN, blogueur, auteur de projets médiatiques et participant aux initiatives publiques.',
     'hero-since':      'Depuis 2023, je me développe dans les domaines des médias, de la production vidéo, du blogging et des projets créatifs.',
@@ -309,6 +346,11 @@ const TRANSLATIONS = {
     'awards-title':    'Prix & Distinctions',
     'award-1':         'Lettre de remerciement pour l\'aide à l\'organisation du Début des Premières Années 2025',
     'award-2':         'Étudiant de l\'année 2025, lauréat de la nomination Personnalité Créative',
+    'education-title': 'Éducation & Conseil étudiant',
+    'education-desc':  'Étudiant en 2e année au Centre-Collège des qualifications appliquées (Université agraire d\'État de Mitchourinsk / MichGAU). Directeur adjoint du comité des résidences du Conseil étudiant. Lauréat de la nomination «Étudiant de l\'année 2025».',
+    'education-item-1':'Étudiant en 2e année au Centre-Collège des qualifications appliquées de MichGAU',
+    'education-item-2':'Directeur adjoint du comité des résidences du Conseil étudiant',
+    'education-item-3':'Lauréat de la nomination «Étudiant de l\'année 2025» — Personnalité Créative',
     'who-title':       'Qui suis-je ?',
     'blogger-title':   'Blogueur',
     'blogger-desc':    'Je crée du contenu médiatique, travaille avec le public et tiens un blog.',
@@ -332,6 +374,7 @@ const TRANSLATIONS = {
 
   zh: {
     'page-title':      '基里尔·达尼乌科夫 — 个人网站',
+    'page-description':'基里尔·达尼乌科夫 — 米丘林斯克国立农业大学(МичГАУ)学生委员会积极分子，应用资格学院中心学生。KVN、媒体、志愿服务、博客。',
     'hero-name':       'Kirill Danyukov',
     'hero-desc':       '创意人士、KVN表演者、博主、媒体项目作者及公共倡议参与者。',
     'hero-since':      '自2023年起，我在媒体、视频制作、博客和创意项目领域不断发展。',
@@ -356,6 +399,11 @@ const TRANSLATIONS = {
     'awards-title':    '荣誉与奖励',
     'award-1':         '因协助组织2025年新生首演而获得感谢信',
     'award-2':         '2025年度学生，创意人物提名获奖者',
+    'education-title': '教育与学生委员会',
+    'education-desc':  '米丘林斯克国立农业大学(МичГАУ)应用资格学院中心二年级学生。学生委员会宿舍委员会副主任。«2025年度学生»提名获奖者。',
+    'education-item-1':'МичГАУ应用资格学院中心二年级学生',
+    'education-item-2':'学生委员会宿舍委员会副主任',
+    'education-item-3':'«2025年度学生» — 创意人物提名获奖者',
     'who-title':       '我是谁？',
     'blogger-title':   '博主',
     'blogger-desc':    '我创作媒体内容，与受众互动，维护博客。',
@@ -379,6 +427,7 @@ const TRANSLATIONS = {
 
   ko: {
     'page-title':      '키릴 다뉴코프 — 포트폴리오',
+    'page-description':'키릴 다뉴코프 — MichGAU(미추린스크 국립농업대학교) 학생회 활동가, 응용자격증 칼리지센터 학생. KVN, 미디어, 자원봉사, 블로깅.',
     'hero-name':       'Kirill Danyukov',
     'hero-desc':       '창의적 인물, KVN 참가자, 블로거, 미디어 프로젝트 작가 및 공공 이니셔티브 참여자.',
     'hero-since':      '2023년부터 미디어, 영상 제작, 블로깅 및 창의적 프로젝트 분야에서 발전하고 있습니다.',
@@ -403,6 +452,11 @@ const TRANSLATIONS = {
     'awards-title':    '수상 및 표창',
     'award-1':         '2025년 신입생 데뷔 행사 조직 지원에 대한 감사장',
     'award-2':         '2025년 올해의 학생, 창의적 인물 부문 수상자',
+    'education-title': '교육 및 학생회',
+    'education-desc':  '응용자격증 칼리지센터(MichGAU / 미추린스크 국립농업대학교) 2학년 학생. 학생회 기숙사위원회 부위원장. «2025년 올해의 학생» 부문 수상자.',
+    'education-item-1':'MichGAU 응용자격증 칼리지센터 2학년 학생',
+    'education-item-2':'학생회 기숙사위원회 부위원장',
+    'education-item-3':'«2025년 올해의 학생» — 창의적 인물 부문 수상자',
     'who-title':       '나는 누구인가?',
     'blogger-title':   '블로거',
     'blogger-desc':    '미디어 콘텐츠를 만들고, 청중과 소통하며, 블로그를 운영합니다.',
@@ -426,6 +480,7 @@ const TRANSLATIONS = {
 
   ja: {
     'page-title':      'キリル・ダニュコフ — ポートフォリオ',
+    'page-description':'キリル・ダニュコフ — MichGAU(ミチュリンスク国立農業大学)学生委員会の活動家、応用資格カレッジセンターの学生。KVN、メディア、ボランティア、ブログ。',
     'hero-name':       'Kirill Danyukov',
     'hero-desc':       'クリエイティブな活動家、KVNパフォーマー、ブロガー、メディアプロジェクトの著者、公共イニシアチブ参加者。',
     'hero-since':      '2023年からメディア、動画制作、ブログ、クリエイティブプロジェクトの分野で活動中。',
@@ -450,6 +505,11 @@ const TRANSLATIONS = {
     'awards-title':    '受賞歴',
     'award-1':         '2025年新入生デビューの組織・運営への支援に対する感謝状',
     'award-2':         '2025年度学生、クリエイティブパーソナリティ部門受賞者',
+    'education-title': '教育と学生委員会',
+    'education-desc':  '応用資格カレッジセンター(MichGAU / ミチュリンスク国立農業大学)2年生。学生委員会寮委員会副委員長。«2025年度学生»部門受賞者。',
+    'education-item-1':'MichGAU応用資格カレッジセンター2年生',
+    'education-item-2':'学生委員会寮委員会副委員長',
+    'education-item-3':'«2025年度学生» — クリエイティブパーソナリティ部門受賞者',
     'who-title':       '私は誰か？',
     'blogger-title':   'ブロガー',
     'blogger-desc':    'メディアコンテンツを作成し、視聴者と交流し、ブログを運営しています。',
@@ -472,6 +532,7 @@ const TRANSLATIONS = {
   },
   hi: {
     'page-title': 'किरिल डेन्यूकोव - बिजनेस कार्ड वेबसाइट',
+    'page-description':'किरिल डेन्यूकोव — MichGAU (मिचुरिंस्क राज्य कृषि विश्वविद्यालय) छात्र परिषद के कार्यकर्ता, अनुप्रयुक्त योग्यता कॉलेज-केंद्र के छात्र। केवीएन, मीडिया, स्वयंसेवा, ब्लॉगिंग।',
     'hero-name':       'Kirill Danyukov\n(किरिल दान्युकोव)',
     'hero-desc': 'रचनात्मक व्यक्ति, केवीएन प्रतिभागी, ब्लॉगर, मीडिया परियोजनाओं के लेखक और सार्वजनिक पहल में भागीदार।',
     'hero-since': '2023 से, मैं मीडिया, वीडियो प्रोडक्शन, ब्लॉगिंग और रचनात्मक परियोजनाओं के क्षेत्र में विकास कर रहा हूं।',
@@ -496,6 +557,11 @@ const TRANSLATIONS = {
     'awards-title': 'पुरस्कार',
     'award-1': 'फ्रेशमैन डेब्यू 2025 के आयोजन और संचालन में सहायता के लिए आभार पत्र',
     'award-2': 'स्टूडेंट ऑफ द ईयर 2025 क्रिएटिव पर्सनैलिटी नामांकन का विजेता',
+    'education-title': 'शिक्षा और छात्र परिषद',
+    'education-desc': 'अनुप्रयुक्त योग्यता कॉलेज-केंद्र (मिचुरिंस्क राज्य कृषि विश्वविद्यालय / MichGAU) में द्वितीय वर्ष का छात्र। छात्र परिषद के छात्रावास समिति के उप प्रमुख। «वर्ष का छात्र 2025» नामांकन के विजेता।',
+    'education-item-1':'MichGAU के अनुप्रयुक्त योग्यता कॉलेज-केंद्र में द्वितीय वर्ष का छात्र',
+    'education-item-2':'छात्र परिषद के छात्रावास समिति के उप प्रमुख',
+    'education-item-3':'«वर्ष का छात्र 2025» — रचनात्मक व्यक्तित्व नामांकन के विजेता',
     'who-title': 'मैं कौन हूँ?',
     'blogger-title': 'ब्लॉगर',
     'blogger-desc': 'मैं मीडिया सामग्री बनाता हूं, दर्शकों के साथ काम करता हूं और एक ब्लॉग बनाए रखता हूं।',
@@ -525,6 +591,7 @@ const TRANSLATIONS = {
 
   ar: {
     'page-title': 'كيريل دانيوكوف – موقع بطاقة العمل',
+    'page-description':'كيريل دانيوكوف — ناشط في مجلس الطلاب في MichGAU (جامعة ميشورينسك الزراعية الحكومية)، طالب في كلية-مركز المؤهلات التطبيقية. KVN، إعلام، تطوع، تدوين.',
     'hero-name':       'Kirill Danyukov\n(كيريل دانيوكوف)',
     'hero-desc': 'شخصية إبداعية، مشارك في KVN، مدون، مؤلف مشاريع إعلامية ومشارك في المبادرات العامة.',
     'hero-since': 'منذ عام 2023 وأنا أتطور في مجال الإعلام وإنتاج الفيديو والتدوين والمشاريع الإبداعية.',
@@ -549,6 +616,11 @@ const TRANSLATIONS = {
     'awards-title': 'الجوائز',
     'award-1': 'خطاب شكر للمساعدة في تنظيم وإجراء برنامج Freshman Debut 2025',
     'award-2': 'طالب العام 2025 الفائز بترشيح الشخصية المبدعة',
+    'education-title': 'التعليم ومجلس الطلاب',
+    'education-desc': 'طالب في السنة الثانية في كلية-مركز المؤهلات التطبيقية (جامعة ميشورينسك الزراعية الحكومية / MichGAU). نائب رئيس لجنة المهاجع في مجلس الطلاب. الفائز بترشيح «طالب العام 2025».',
+    'education-item-1':'طالب في السنة الثانية في كلية-مركز المؤهلات التطبيقية في MichGAU',
+    'education-item-2':'نائب رئيس لجنة المهاجع في مجلس الطلاب',
+    'education-item-3':'الفائز بترشيح «طالب العام 2025» — الشخصية المبدعة',
     'who-title': 'من أنا؟',
     'blogger-title': 'مدَّوِن',
     'blogger-desc': 'أقوم بإنشاء محتوى إعلامي، والعمل مع الجماهير، وإدارة مدونة.',
@@ -578,22 +650,23 @@ const TRANSLATIONS = {
 
   pt: {
     'page-title': 'Kirill Danyukov — Site de cartão de visita',
+    'page-description':'Kirill Danyukov — ativista do conselho estudantil da MichGAU (Universidade Agrária Estadual de Michurinsk), estudante do Centro-Colégio de Qualificações Aplicadas. KVN, mídia, voluntariado, blogging.',
     'hero-name': 'Kirill Danyukov',
     'hero-desc': 'Figura criativa, participante da KVN, blogueira, autora de projetos de mídia e participante de iniciativas públicas.',
     'hero-since': 'Desde 2023 venho desenvolvendo na área de mídia, produção de vídeos, blogs e projetos criativos.',
     'scroll-hint': 'role abaixo',
     'section-experience': 'Experiência e conquistas',
     'kvn-title': 'KVN',
-    'kvn-1': 'Fundador da equipe KVN “STUD SQUAD”',
+    'kvn-1': 'Fundador da equipe KVN "STUD SQUAD"',
     'kvn-2': 'Anteriormente, a equipe atuava sob o nome de "Eaglets"',
     'kvn-3': 'Participação em concursos criativos e eventos humorísticos',
     'tykni': 'Picar!',
     'media-title': 'Mídia e blogs',
-    'media-1': 'Ex-líder da equipe de blogs “Continuação”',
+    'media-1': 'Ex-líder da equipe de blogs "Continuação"',
     'media-2': 'Criação de vídeo, edição, trabalho em projetos originais',
     'media-3': 'Produção de curta-metragem',
     'startups-title': 'Startups e projetos',
-    'startups-1': 'Participante no desenvolvimento do projeto “Bubble Gum”',
+    'startups-1': 'Participante no desenvolvimento do projeto "Bubble Gum"',
     'startups-2': 'Participação no desenvolvimento do projeto BigFoot',
     'vol-title': 'Voluntariado',
     'vol-1': 'Participação em atividades de desenvolvimento voluntário',
@@ -602,6 +675,11 @@ const TRANSLATIONS = {
     'awards-title': 'Prêmios',
     'award-1': 'Carta de agradecimento pela assistência na organização e condução do Freshman Debut 2025',
     'award-2': 'Aluno do Ano 2025 vencedor da indicação de Personalidade Criativa',
+    'education-title': 'Educação e Conselho Estudantil',
+    'education-desc': 'Estudante do 2º ano do Centro-Colégio de Qualificações Aplicadas (Universidade Agrária Estadual de Michurinsk / MichGAU). Vice-Chefe da Comissão de Dormitórios do Conselho Estudantil. Vencedor da nomeação «Aluno do Ano 2025».',
+    'education-item-1':'Estudante do 2º ano do Centro-Colégio de Qualificações Aplicadas da MichGAU',
+    'education-item-2':'Vice-Chefe da Comissão de Dormitórios do Conselho Estudantil',
+    'education-item-3':'Vencedor da nomeação «Aluno do Ano 2025» — Personalidade Criativa',
     'who-title': 'Quem sou eu?',
     'blogger-title': 'Blogueiro',
     'blogger-desc': 'Eu crio conteúdo de mídia, trabalho com o público e mantenho um blog.',
@@ -631,6 +709,7 @@ const TRANSLATIONS = {
 
   es: {
     'page-title': 'Kirill Danyukov — Sitio web de tarjetas de visita',
+    'page-description':'Kirill Danyukov — activista del consejo estudiantil de MichGAU (Universidad Agraria Estatal de Michurinsk), estudiante del Centro-Colegio de Cualificaciones Aplicadas. KVN, medios, voluntariado, blogs.',
     'hero-name': 'Kirill Danyukov',
     'hero-desc': 'Figura creativa, participante de KVN, bloguero, autor de proyectos de medios y participante de iniciativas públicas.',
     'hero-since': 'Desde 2023 me desarrollo en el campo de los medios, la producción de videos, los blogs y los proyectos creativos.',
@@ -646,7 +725,7 @@ const TRANSLATIONS = {
     'media-2': 'Creación de vídeo, edición, trabajo en proyectos originales.',
     'media-3': 'producción de cortometrajes',
     'startups-title': 'Startups y proyectos',
-    'startups-1': 'Participante en el desarrollo del proyecto “Bubble Gum”',
+    'startups-1': 'Participante en el desarrollo del proyecto "Bubble Gum"',
     'startups-2': 'Participación en el desarrollo del proyecto BigFoot.',
     'vol-title': 'Voluntariado',
     'vol-1': 'Participación en actividades de desarrollo de voluntariado.',
@@ -655,6 +734,11 @@ const TRANSLATIONS = {
     'awards-title': 'Premios',
     'award-1': 'Carta de agradecimiento por la asistencia en la organización y realización del Freshman Debut 2025',
     'award-2': 'Estudiante del Año 2025 ganador de la nominación de Personalidad Creativa',
+    'education-title': 'Educación y Consejo Estudiantil',
+    'education-desc': 'Estudiante de 2º año del Centro-Colegio de Cualificaciones Aplicadas (Universidad Agraria Estatal de Michurinsk / MichGAU). Subdirector del Comité de Dormitorios del Consejo Estudiantil. Ganador de la nominación «Estudiante del Año 2025».',
+    'education-item-1':'Estudiante de 2º año del Centro-Colegio de Cualificaciones Aplicadas de MichGAU',
+    'education-item-2':'Subdirector del Comité de Dormitorios del Consejo Estudiantil',
+    'education-item-3':'Ganador de la nominación «Estudiante del Año 2025» — Personalidad Creativa',
     'who-title': '¿Quién soy yo?',
     'blogger-title': 'Blogger',
     'blogger-desc': 'Creo contenido multimedia, trabajo con audiencias y mantengo un blog.',
@@ -684,13 +768,14 @@ const TRANSLATIONS = {
 
   it: {
     'page-title': 'Kirill Danyukov — Sito web di biglietti da visita',
+    'page-description':'Kirill Danyukov — attivista del consiglio studentesco di MichGAU (Università Agraria Statale di Mitschurinsk), studente del Centro-College delle Qualifiche Applicate. KVN, media, volontariato, blogging.',
     'hero-name': 'Kirill Danjukov',
     'hero-desc': 'Figura creativa, partecipante KVN, blogger, autore di progetti mediatici e partecipante ad iniziative pubbliche.',
     'hero-since': 'Dal 2023 mi occupo di media, produzione video, blogging e progetti creativi.',
     'scroll-hint': 'scorri sotto',
     'section-experience': 'Esperienza e risultati',
     'kvn-title': 'KVN',
-    'kvn-1': 'Fondatore del team KVN “STUD SQUAD”',
+    'kvn-1': 'Fondatore del team KVN "STUD SQUAD"',
     'kvn-2': 'In precedenza, la squadra si esibiva sotto il nome di "Eaglets"',
     'kvn-3': 'Partecipazione a concorsi creativi ed eventi umoristici',
     'tykni': 'Colpisci!',
@@ -699,7 +784,7 @@ const TRANSLATIONS = {
     'media-2': 'Creazione video, editing, lavoro su progetti originali',
     'media-3': 'Produzione di cortometraggi',
     'startups-title': 'Startup e progetti',
-    'startups-1': 'Partecipante allo sviluppo del progetto “Bubble Gum”.',
+    'startups-1': 'Partecipante allo sviluppo del progetto "Bubble Gum".',
     'startups-2': 'Partecipazione allo sviluppo del progetto BigFoot',
     'vol-title': 'Volontariato',
     'vol-1': 'Partecipazione ad attività di sviluppo del volontariato',
@@ -708,6 +793,11 @@ const TRANSLATIONS = {
     'awards-title': 'Premi',
     'award-1': 'Lettera di ringraziamento per l\'assistenza nell\'organizzazione e nella conduzione del Freshman Debut 2025',
     'award-2': 'Studente dell\'anno 2025 vincitore della nomination Personalità Creativa',
+    'education-title': 'Istruzione e Consiglio Studentesco',
+    'education-desc': 'Studente del 2° anno del Centro-College delle Qualifiche Applicate (Università Agraria Statale di Mitschurinsk / MichGAU). Vice capo del comitato dei dormitori del Consiglio Studentesco. Vincitore della nomination «Studente dell\'Anno 2025».',
+    'education-item-1':'Studente del 2° anno del Centro-College delle Qualifiche Applicate di MichGAU',
+    'education-item-2':'Vice capo del comitato dei dormitori del Consiglio Studentesco',
+    'education-item-3':'Vincitore della nomination «Studente dell\'Anno 2025» — Personalità Creativa',
     'who-title': 'Chi sono io?',
     'blogger-title': 'Blogger',
     'blogger-desc': 'Creo contenuti multimediali, lavoro con il pubblico e gestisco un blog.',
@@ -1093,6 +1183,22 @@ function applyLang(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 
+  // Update meta description
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && dict['page-description']) {
+    metaDesc.setAttribute('content', dict['page-description']);
+  }
+
+  // Update OG meta tags
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle && dict['page-title']) {
+    ogTitle.setAttribute('content', dict['page-title']);
+  }
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc && dict['page-description']) {
+    ogDesc.setAttribute('content', dict['page-description']);
+  }
+
   document.querySelectorAll('.lang-option').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
@@ -1145,7 +1251,7 @@ function initLang() {
   if (matched) {
     applyLang(matched);
   } else {
-    applyLang('en'); // Default to English if browser language is not supported
+    applyLang('ru'); // Default to Russian — site targets Russian-speaking audience
   }
 }
 

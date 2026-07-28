@@ -10,10 +10,15 @@ import os
 import re
 import hashlib
 import shutil
+import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 DIST = ROOT / 'dist'
+
+# SITE_URL — used for canonical, og:url, og:image, sitemap
+SITE_URL = os.environ.get('SITE_URL', 'https://kirilldanyukov.github.io/KirillDanyukov')
+NOW = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d')
 
 
 def ensure_pkg(import_name, pip_name=None):
@@ -152,6 +157,35 @@ for name in ('favicon.svg', 'favicon.ico'):
     f = ROOT / name
     if f.exists():
         shutil.copy2(f, DIST / name)
+
+# ── 7. Generate robots.txt ────────────────────────────────────────────────────
+robots_txt = f"""User-agent: *
+Allow: /
+Sitemap: {SITE_URL}/sitemap.xml
+"""
+(DIST / 'robots.txt').write_text(robots_txt, encoding='utf-8')
+print(f"robots.txt : generated (sitemap: {SITE_URL}/sitemap.xml)")
+
+# ── 8. Generate sitemap.xml ───────────────────────────────────────────────────
+sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{SITE_URL}/</loc>
+    <lastmod>{NOW}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+"""
+(DIST / 'sitemap.xml').write_text(sitemap_xml, encoding='utf-8')
+print(f"sitemap.xml: generated (1 URL, lastmod {NOW})")
+
+# ── 9. Substitute SITE_URL in HTML (canonical, og:url, og:image) ──────────────
+html_path = DIST / 'index.html'
+html_content = html_path.read_text(encoding='utf-8')
+html_content = html_content.replace('https://kirilldanyukov.github.io/KirillDanyukov', SITE_URL)
+html_path.write_text(html_content, encoding='utf-8')
+print(f"index.html : SITE_URL substituted ({SITE_URL})")
 
 # ── Summary ───────────────────────────────────────────────────────────────────
 total_kb = sum(f.stat().st_size for f in DIST.rglob('*') if f.is_file()) // 1024
