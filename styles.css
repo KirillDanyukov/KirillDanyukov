@@ -415,6 +415,48 @@ body {
   color: var(--pencil);
 }
 
+/* === EDUCATION SECTION === */
+.education-section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.edu-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.edu-desc {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.edu-list {
+  list-style: none;
+  padding: 0;
+}
+.edu-list li {
+  position: relative;
+  padding: 10px 0 10px 28px;
+  font-size: 1.1rem;
+  color: var(--pencil);
+}
+.edu-list li::before {
+  content: '✧';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+/* === VIDEO DESC === */
+.video-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--pencil);
+  padding: 0 14px 14px;
+  max-width: 280px;
+}
+
 /* === ORGS SECTION (static, no scroll) === */
 .orgs-section {
   padding-top: 40px;
